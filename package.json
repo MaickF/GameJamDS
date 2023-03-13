@@ -1,0 +1,24 @@
+{
+  "name": "gamejamds",
+  "version": "1.0.0",
+  "description": "Proyecto, diseño web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaickF/GameJamDS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaickF/GameJamDS/issues"
+  },
+  "homepage": "https://github.com/MaickF/GameJamDS#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.21"
+  }
+}

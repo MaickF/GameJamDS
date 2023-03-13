@@ -1,0 +1,31 @@
+<html> 
+<head> 
+    <title>Express HTML</title> 
+</head> 
+<body> 
+        <div>
+        <h3 className= "text-white">Iniciar Sesión</h3>
+        
+          <div className="form-group">
+            <label className= "text-white"htmlFor="name">Correo</label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+            />
+          </div>
+          <div className="form-group">
+            <label className= "text-white"htmlFor="position">Contraseña</label>
+            <input
+              secureTextEntry={true}
+              type="password"
+              className="form-control"           
+            />
+          </div>
+          <br></br>
+          <button className= "btn text-white btn-outline-secondary" onClick= {onSubmit}>Iniciar Sesion</button>
+          <button className= "btn text-white btn-outline-secondary" onClick= {onSubmit}>registrarse</button>
+        </div>
+   
+</body> 
+</html> 
