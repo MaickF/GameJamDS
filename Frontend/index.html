@@ -1,32 +1,18 @@
-<html> 
-<head> 
-    <title>Express HTML</title> 
-</head> 
-<body> 
-        <div>
-        <h3 className= "text-white">Iniciar Sesión</h3>
-        
-          <div className="form-group">
-            <label className= "text-white"htmlFor="name">Correo</label>
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-            />
-          </div>
-          <div className="form-group">
-            <label className= "text-white"htmlFor="position">Contraseña</label>
-            <input
-              secureTextEntry={true}
-              type="password"
-              className="form-control"           
-            />
-          </div>
-          <br></br>
-          <button onclick="onSubmit()">Ingresar</button>
-          <a href="/registro" className="btn btn-default btn-lg bg-success">registrarse</a>
-        </div>
-        <script src="verificacion.js"></script>
-   
-</body> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Inicio de sesión</title>
+  </head>
+  <body>
+    <h1>Inicio de sesión</h1>
+    <form action="/login" method="POST">
+      <label for="Correo">Correo:</label>
+      <input type="text" id="correo" name="correo"><br><br>
+      <label for="contrasenha">Contraseña:</label>
+      <input type="password" id="contrasenha" name="contrasenha"><br><br>
+      <input type="submit" value="Iniciar sesión">
+    </form>
+    <a href="/register">Regístrate aquí</a>
+  </body>
 </html>
