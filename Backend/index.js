@@ -25,7 +25,52 @@ const userSchema = mongoose.Schema({
     contrasenha: String
 }, {versionKey: false})
 
+const eventSchema = mongoose.Schema({
+  nombre: String,
+  tema: String,
+  fecha: String
+}, {versionKey: false})
+
+const gameSchema = mongoose.Schema({
+  titulo: String,
+  categoria: String,
+  engine: String
+}, {versionKey: false})
+
+const categorySchema = mongoose.Schema({
+  nombre: String,
+  descripcion: String
+}, {versionKey: false})
+
+const placeSchema = mongoose.Schema({
+  ubicacion: String,
+  pais: String,
+  ciudad: String
+}, {versionKey: false})
+
+const feedbackSchema = mongoose.Schema({
+  titulo: String,
+  evento: String
+}, {versionKey: false})
+
+const rolSchema = mongoose.Schema({
+  nombre: String,
+  evento: String
+}, {versionKey: false})
+
+const rateSchema = mongoose.Schema({
+  cal: String,
+  calDesempate: String
+}, {versionKey: false})
+
 const User = mongoose.model('Usuario', userSchema)
+const Event = mongoose.model('Event', eventSchema)
+const Game = mongoose.model('Game', gameSchema)
+const Category = mongoose.model('Category', categorySchema)
+const Place = mongoose.model('Place', placeSchema)
+const Feedback = mongoose.model('Feedback', feedbackSchema)
+const Rol = mongoose.model('Rol', rolSchema)
+const Rate = mongoose.model('Rate', rateSchema)
 
 //Configuración de Express
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -42,6 +87,33 @@ app.get('/', (req, res) => {
 //Página de registro
 app.get('/register', (req, res) => {
     res.sendFile(stepBack + '/frontend/register.html');
+});
+
+app.get('/info', async (req, res) => {
+  try {
+    const totalUsuarios = await User.countDocuments();
+    Event.findOne({ fecha: "2023" }).exec()
+    .then((evento) => {
+      
+          const nombre = evento.nombre;
+          const tema = evento.tema;
+          const fecha = evento.fecha;
+          const divCantidadUsuarios = `<div id="cantidadUsuarios"><h1>numero de usuarios:${totalUsuarios}<h1>
+          <h2>evento: ${nombre}<h2>
+          <h2>tema: ${tema}<h2>
+          <h2>Anho: ${fecha}<h2></div>`;
+          res.send(divCantidadUsuarios);
+          console.log(divCantidadUsuarios);
+        
+    })
+    .catch((err) => {
+        console.log(err);
+        res.redirect('/');
+    });
+  } catch (error) {
+    console.log('Error al buscar usuarios:', error);
+    res.send('Error al buscar usuarios');
+  }
 });
 
 app.post('/register', (req, res) => {
@@ -92,7 +164,7 @@ app.post('/login', (req, res) => {
                 expiresIn: '7d'
               });
               console.log(token)
-              res.sendFile(stepBack + '/frontend/home.html');
+              res.sendFile(stepBack + '/frontend/evento.html');
             }else{
               res.redirect('/');
             }
