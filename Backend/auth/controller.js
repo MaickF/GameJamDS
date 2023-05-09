@@ -2,12 +2,43 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const Usuario = require('./Usuario');
 const SECRET_KEY = 'secretkey123456';
-
+const mongoose = require('mongoose');
 const { User, Event, Game, Category, Place, Feedback, Rol, Rate } = require('./dao');
+
+/*const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  // Otros campos del usuario
+});
+
+const User = mongoose.model('User', userSchema);
+*/
 
 exports.prueba = (req, res) => {
   res.send('Hello from home');
 }
+
+exports.getUserList = (req, res) => {
+  User.find({})
+    .then(users => {
+      res.json(users);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+};
+
+exports.getEventList = (req, res) => {
+  Event.find({})
+    .then(events => {
+      res.json(events);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+};
 
 exports.createUser = (req, res, next) => {
     console.log("registro");

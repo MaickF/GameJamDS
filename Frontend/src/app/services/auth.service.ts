@@ -44,6 +44,10 @@ export class AuthService {
     localStorage.removeItem("EXPIRES_IN");
   }
 
+  getEvents(): Observable<any> {
+    return this.httpClient.get<any>(`${this.AUTH_SERVER}/events`);
+  }
+
   private saveToken(token: string, expiresIn: string):void{
     localStorage.setItem("ACCESS_TOKEN", token);
     localStorage.setItem("EXPIRES_IN", expiresIn);
