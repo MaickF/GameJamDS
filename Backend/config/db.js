@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 //Conexión con la base de datos
-const url = 'mongodb://127.0.0.1:27017/GameJamBD'
+const url = 'mongodb://127.0.0.1:27017/GameJameBD'
 
 module.exports = () => {
   mongoose.connect(url, { useNewUrlParser: true })

@@ -3,25 +3,19 @@ const bcrypt = require('bcryptjs');
 const Usuario = require('./Usuario');
 const SECRET_KEY = 'secretkey123456';
 const mongoose = require('mongoose');
+
 const { User, Event, Game, Category, Place, Feedback, Rol, Rate } = require('./dao');
-
-/*const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  // Otros campos del usuario
-});
-
-const User = mongoose.model('User', userSchema);
-*/
 
 exports.prueba = (req, res) => {
   res.send('Hello from home');
 }
 
 exports.getUserList = (req, res) => {
+  console.log("fdo");
   User.find({})
     .then(users => {
       res.json(users);
+      console.log(users)
     })
     .catch(err => {
       console.error(err);

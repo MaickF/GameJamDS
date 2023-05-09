@@ -1,4 +1,41 @@
-<h2>List of Users:</h2>
-<ul>
-  <li *ngFor="let event of events">{{ event.feha }}</li>
+<style>
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  .event-item {
+    font-size: medium;
+    background-color: #ffffffad;
+    padding: 15px; /* Reducir el espacio interno del cuadro */
+    border-radius: 20px;
+    text-align: center;
+    width: 300px; /* Establecer un ancho fijo para el cuadro */
+    margin: 5px; /* Ajustar el margen entre los cuadros */
+    white-space: nowrap; /* Evitar que el texto se desborde */
+    overflow: hidden; /* Ocultar el texto desbordado */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos cuando el texto se desborda */
+  }
+
+  .contenedor{
+    color: #f2f2f2;
+  }
+
+</style>
+
+<h2 class="contenedor">Lista de eventos:</h2>
+<ul class="event-list">
+  <li class="event-item" *ngFor="let event of events">
+    <h3>
+      <span>Fecha:</span> {{ event.fecha }} <br>
+      <span>Ubicación:</span> {{ event.ubicacion }}<br>
+      <span>Tema:</span> {{ event.tema }} <br>
+      <span>Descripción:</span> {{ event.Descripcion }}
+    </h3>
+  </li>
 </ul>
+
