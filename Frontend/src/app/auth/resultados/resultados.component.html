@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-12">
+      <ul class="list-group">
+        <h2 *ngIf="juegos && juegos.length > 0">Resultados:</h2>
+        <li *ngFor="let juego of juegos" class="list-group-item">
+          <h3>{{ juego.nombre }}</h3>
+          <p>Categoría: {{ juego.categoria }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<button (click)="ngOnInit()">Forzar</button>

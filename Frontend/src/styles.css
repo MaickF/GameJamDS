@@ -21,6 +21,7 @@
 
 /* 'Open Sans' font from Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import '~bootstrap/dist/css/bootstrap.css';
 
 body {
   background: rgb(45, 62, 82);
@@ -114,4 +115,51 @@ body {
 /* Buttons' focus effect */
 .login input[type="submit"]:focus {
   border-color: #05a;
+}
+
+
+/*      */
+
+body {
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: -2;
+}
+
+.body:hover{
+  color: #00aaff;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+
+.active-link {
+  color: #00aaff;
+  font-weight: bold;
+  font-size: var(--bs-nav-link-font-size);
+}
+
+
+.navbar-nav {
+  margin-right: auto;
+}
+
+.navbar-nav .form-inline {
+  margin-left: auto;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form button[type="submit"] {
+  margin-right: 5px;
+}
+
+.search-form input[type="search"] {
+  margin-left: 5px;
+  margin-right: 5px;
 }

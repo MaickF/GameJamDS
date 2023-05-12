@@ -14,7 +14,7 @@ const { userSchema, eventSchema, gameSchema, categorySchema, placeSchema, feedba
 const authModel = mongoose.model('Users', authSchema);
 module.exports = authModel;
 */
-const User = mongoose.model('Usuario', userSchema)
+const User = mongoose.model('User', userSchema)
 const Event = mongoose.model('Event', eventSchema)
 const Game = mongoose.model('Game', gameSchema)
 const Category = mongoose.model('Category', categorySchema)

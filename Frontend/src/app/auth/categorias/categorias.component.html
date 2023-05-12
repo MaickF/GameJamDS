@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!--  Zord categoría -->
+    <div id="categoria-container" class="arrow-container">
+      <img class="arrow-left" src="./assets/images/arrow.png" alt="Left arrow" onmouseover="this.src='./assets/images/arrow2.png'" onmouseout="this.src='./assets/images/arrow.png'" (click)="prev()">
+      <img id="categoria-previa" [src]="imagenes[(indiceCategoriaActual + 1) % imagenes.length]" alt="Previous category">
+      <img id="categoria" [src]="imagenes[indiceCategoriaActual]" alt="Current category" (click)="showCategory()">
+      <div id="categoria-texto">{{ currentCategoryName }}</div>
+      <img id="categoria-siguiente" [src]="imagenes[(indiceCategoriaActual - 1 + imagenes.length) % imagenes.length]" alt="Next category">
+      <img class="arrow-right" src="./assets/images/arrow.png" alt="Right arrow" onmouseover="this.src='./assets/images/arrow2.png'" onmouseout="this.src='./assets/images/arrow.png'" (click)="next()">
+    </div> 
+
+    <div id="juegos-container" class="juegos-container">
+      <ul id="juegos-lista">
+        <li *ngFor="let juego of juegosCategoria">{{ juego }}</li>
+      </ul>
+    </div>
+
+  </body>
+</html>
+

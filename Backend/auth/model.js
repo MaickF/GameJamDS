@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
-    correo: String,
-    contrasenha: String
+  correo: String,
+  contrasenha: String
 }, {versionKey: false});
 
 const eventSchema = mongoose.Schema({
@@ -12,7 +12,7 @@ const eventSchema = mongoose.Schema({
 }, {versionKey: false});
 
 const gameSchema = mongoose.Schema({
-  titulo: String,
+  nombre: String,
   categoria: String,
   engine: String
 }, {versionKey: false});
