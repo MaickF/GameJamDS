@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d583"
+  },
+  "categoria": "Acción",
+  "descripcion": "Juego con intensos combates y acción frenética donde el jugador debe enfrentarse a desafiantes enemigos y superar obstáculos."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d584"
+  },
+  "categoria": "Aventura",
+  "descripcion": "Juego que involucra exploración, resolución de acertijos y narrativa envolvente para guiar al jugador a través de una historia emocionante."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d585"
+  },
+  "categoria": "Horror",
+  "descripcion": "Juego que busca asustar y crear una atmósfera de terror, utilizando elementos como suspenso, monstruos y situaciones aterradoras para generar miedo en el jugador."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d586"
+  },
+  "categoria": "Metroidvania",
+  "descripcion": "Juego que combina elementos de exploración, plataformas y mejoras progresivas del personaje, inspirado en los juegos Metroid y Castlevania."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d587"
+  },
+  "categoria": "Carreras",
+  "descripcion": "Juego donde los jugadores compiten en diferentes tipos de vehículos y pistas para llegar primero a la meta, demostrando habilidades de conducción y estrategia."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d588"
+  },
+  "categoria": "Rol",
+  "descripcion": "Juego en el que el jugador asume el papel de un personaje y se sumerge en un mundo ficticio, tomando decisiones y desarrollando habilidades para avanzar en la historia."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d589"
+  },
+  "categoria": "Simulación",
+  "descripcion": "Juego que busca replicar o simular una actividad o experiencia de la vida real, como pilotar aviones, manejar ciudades o construir parques de atracciones."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d58a"
+  },
+  "categoria": "Deportes",
+  "descripcion": "Juego que simula deportes populares, como fútbol, baloncesto, tenis, entre otros, donde los jugadores pueden competir contra la IA o contra otros jugadores."
+},{
+  "_id": {
+    "$oid": "645db645b6450de6ef33d58b"
+  },
+  "categoria": "Estrategia",
+  "descripcion": "Juego que requiere de habilidades estratégicas para tomar decisiones y planificar tácticas con el objetivo de alcanzar la victoria en situaciones de conflicto o desafío."
+}]

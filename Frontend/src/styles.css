@@ -134,13 +134,11 @@ body {
   border-radius: 10px;
 }
 
-
 .active-link {
   color: #00aaff;
   font-weight: bold;
   font-size: var(--bs-nav-link-font-size);
 }
-
 
 .navbar-nav {
   margin-right: auto;

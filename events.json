@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "645bf451abd62a50cbc703f0"
+  },
+  "fechaInicio": "10/04/2018",
+  "fechaFinal": "10/05/2018",
+  "tema": "tema1",
+  "ubicacion": "Costa Rica-San Jose",
+  "descripcion": "Descripcion generica 1"
+},{
+  "_id": {
+    "$oid": "645bf666abd62a50cbc703f1"
+  },
+  "fechaInicio": "10/04/2019",
+  "fechaFinal": "10/05/2019",
+  "tema": "tema2",
+  "ubicacion": "Estados Unidos-Ohio",
+  "descripcion": "Descripción genérica 2"
+},{
+  "_id": {
+    "$oid": "645bf6d6abd62a50cbc703f2"
+  },
+  "fechaInicio": "10/04/2020",
+  "fechaFinal": "10/05/2020",
+  "tema": "tema3",
+  "ubicacion": "Colombia-Bogotá",
+  "descripcion": "Descripción genérica 3"
+},{
+  "_id": {
+    "$oid": "645bf796abd62a50cbc703f3"
+  },
+  "fechaInicio": "10/04/2021",
+  "fechaFinal": "10/05/2021",
+  "tema": "tema4",
+  "ubicacion": "Brasil-São Paulo​",
+  "descripcion": "Descripción genérica 4"
+},{
+  "_id": {
+    "$oid": "645bf7ceabd62a50cbc703f4"
+  },
+  "fechaInicio": "10/04/2022",
+  "fechaFinal": "10/05/2022",
+  "tema": "tema5",
+  "ubicacion": "España-Madrid",
+  "descripcion": "Descripción genérica 5"
+},{
+  "_id": {
+    "$oid": "645bf83eabd62a50cbc703f5"
+  },
+  "fechaInicio": "10/04/2023",
+  "fechaFinal": "10/05/2023",
+  "tema": "tema6",
+  "ubicacion": "Mexico-Chihuahua",
+  "descripcion": "Descripción genérica 6"
+}]

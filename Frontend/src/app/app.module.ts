@@ -6,13 +6,6 @@ import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-/*
-import { CategoriasComponent } from './categorias/categorias.component';
-import { ResultadosComponent } from './resultados/resultados.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { LoginComponent } from './login/login.component';
-import { SingupComponent } from './singup/singup.component';
-*/
 
 @NgModule({
   declarations: [

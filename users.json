@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "64113bf5478a26d50f273d4b"
+  },
+  "correo": "rf2w3er23",
+  "contrasenha": "32rrr23f"
+},{
+  "_id": {
+    "$oid": "645dd069d4ef3b9b52834f9b"
+  },
+  "correo": "admin",
+  "contrasenha": "1234"
+}]
