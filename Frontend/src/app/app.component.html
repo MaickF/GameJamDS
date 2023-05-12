@@ -27,25 +27,30 @@
           <a class="nav-link" routerLink="/auth/categorias" routerLinkActive="active-link">Categorías</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/auth/event" routerLinkActive="active-link">Eventos</a>
+        </li>
+
       </ul>
 
       <form class="form-inline my-2 my-lg-0 ml-auto search-form" (submit)="buscarValor()">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar juegos" aria-label="Buscar juegos"
-            [(ngModel)]="searchValue" name="search" required>
+          [(ngModel)]="searchValue" name="search" required>
       </form>
     </div>
   </nav>
 
   <router-outlet></router-outlet>
 
+  <!-- Pie de página -->
   <footer class="navbar-brand">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" >About</a>
-      <a class="navbar-brand" >|</a>
-      <a class="navbar-brand" >Contacts</a>
-      <a class="navbar-brand" >|</a>
-      <a class="navbar-brand" >Sponsor</a>
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+      <a  class="navbar-brand">About</a>
+      <a  class="navbar-brand">|</a>
+      <a  class="navbar-brand">Contacts</a>
+      <a  class="navbar-brand">|</a>
+      <a  class="navbar-brand">Sponsor</a>
     </nav>
   </footer>
 </body>

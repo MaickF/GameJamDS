@@ -30,16 +30,14 @@
     display: inline-block;
   }
 
-  .custom-select {
+.custom-select {
   padding: 8px 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
   color: #333;
   background-color: #fff;
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
 }
 
 .noMarginBot{
