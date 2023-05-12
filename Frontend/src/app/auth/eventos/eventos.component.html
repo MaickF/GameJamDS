@@ -1,41 +1,25 @@
-<style>
-  .event-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-  }
-
-  .event-item {
-    font-size: medium;
-    background-color: #ffffffad;
-    padding: 15px; /* Reducir el espacio interno del cuadro */
-    border-radius: 20px;
-    text-align: center;
-    width: 300px; /* Establecer un ancho fijo para el cuadro */
-    margin: 5px; /* Ajustar el margen entre los cuadros */
-    white-space: nowrap; /* Evitar que el texto se desborde */
-    overflow: hidden; /* Ocultar el texto desbordado */
-    text-overflow: ellipsis; /* Mostrar puntos suspensivos cuando el texto se desborda */
-  }
-
-  .contenedor{
-    color: #f2f2f2;
-  }
-
-</style>
-
-<h2 class="contenedor">Lista de eventos:</h2>
-<ul class="event-list">
-  <li class="event-item" *ngFor="let event of events">
-    <h3>
-      <span>Fecha:</span> {{ event.fecha }} <br>
-      <span>Ubicación:</span> {{ event.ubicacion }}<br>
-      <span>Tema:</span> {{ event.tema }} <br>
-      <span>Descripción:</span> {{ event.Descripcion }}
-    </h3>
-  </li>
-</ul>
+<div>
+  <select [(ngModel)]="selectedDate" class="custom-select">
+    <option value="">Seleccionar fecha</option>
+    <option *ngFor="let event of events" [value]="event.fechaInicio">{{ event.fechaInicio }}</option>
+  </select>
+  <div *ngIf="selectedDate" class="event-content">
+    <div class="row center" style="color:rgb(229, 146, 44)">
+      <h1 class="noMarginBot">Game Jam  </h1>
+      <h2 class="noMarginBot textoBajo margenInicial">{{ getSelectedEvent()?.fechaInicio }} - </h2>
+      <h2 class="noMarginBot textoBajo">{{ getSelectedEvent()?.fechaFinal }}</h2>
+    </div>
+    <div class="center">
+        <h3 class="noMarginTop">{{ getSelectedEvent()?.ubicacion }}</h3>
+    </div>
+    <div class="alineacion row"> 
+        <h3>Tema: </h3>
+        <h4 class="margenInicial" style="color: rgba(0, 0, 0, 0.758);">{{ getSelectedEvent()?.tema }}</h4>
+    </div>
+    <div class="alineacion row">
+        <h3>Descripción: </h3>
+        <h4 class="margenInicial" style="color: rgba(0, 0, 0, 0.758);">{{ getSelectedEvent()?.descripcion }}</h4>
+    </div>
+  </div>  
+</div>
 

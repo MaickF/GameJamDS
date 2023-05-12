@@ -1,0 +1,65 @@
+  .event-content {
+    color: #000000;
+    width: 70%;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden; /* Ocultar el texto desbordado */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos cuando el texto se desborda */
+    margin: auto;
+    white-space: normal;
+    margin-top: 5%;
+  }
+
+  .alineacion{
+    margin-left: 2%;
+  }
+
+  .row{
+    display: flex;
+  }
+
+  .center{
+    justify-content: center;
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+  .textoBajo {
+    padding-top: 10px;
+    display: inline-block;
+  }
+
+  .custom-select {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.noMarginBot{
+    margin-bottom: 0;
+}
+.noMarginTop{
+    margin-top: 0;
+}
+
+.margenInicial{
+    margin-left: 10px;
+}
+
+.custom-select:focus {
+  outline: none;
+  box-shadow: 0 0 4px #999;
+}
+
+.custom-select option {
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+}
