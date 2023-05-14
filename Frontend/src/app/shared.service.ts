@@ -8,7 +8,6 @@ interface Juego {
   imagen: string;
 }
 
-
 @Injectable({
   providedIn: 'root'
 })
