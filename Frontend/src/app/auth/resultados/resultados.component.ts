@@ -14,17 +14,17 @@ interface Juego {
   styleUrls: ['./resultados.component.css']
 })
 
-export class ResultadosComponent implements OnInit{
+export class ResultadosComponent{
 
   title = "Resultados";
   juegos: Juego[] = [];
   
-  constructor(private http: HttpClient, private router: Router, private sharedService: SharedService) {
+  constructor(private http: HttpClient, private router: Router, public sharedService: SharedService) {
     console.log("Entro router "  + this.router.url)
   }
 
-  ngOnInit() {
+  forzar() {
     this.juegos = this.sharedService.juegos;
-    console.log("\n\nforsando \nrecibio a \n" + JSON.stringify(this.juegos) + "\n" +JSON.stringify(this.sharedService.juegos));
+    console.log("\n\nforsando \nrecibio a \n" + JSON.stringify(this.juegos) + "\n" + JSON.stringify(this.sharedService.juegos));
   }
 }

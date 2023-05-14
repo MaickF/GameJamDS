@@ -30,7 +30,7 @@ export class CategoriasComponent {
   }
 
   categoryNames = ["Action", "Adventure", "Horror", "Metroidvania", "Racing", "Role-playing", "Simulation", "Sports", "Strategy"];
-  categoryNamesES = [ "Acción", "Aventura", "Terror", "Metroidvania", "Carreras", "Rol", "Simulación", "Deportes", "Estrategia"];
+  categoryNamesES = [ "Acción", "Aventura", "Horror", "Metroidvania", "Carreras", "Rol", "Simulación", "Deportes", "Estrategia"];
   currentCategoryName  = this.categoryNames[this.indiceCategoriaActual];
   imagenes = this.categoryNames.map(category => `./assets/images/${category.toLowerCase()}.png`);
   juegosCategoria: string[] = [];

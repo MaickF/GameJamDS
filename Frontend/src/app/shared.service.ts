@@ -15,7 +15,6 @@ interface Juego {
 
 
 export class SharedService {
-  
   juegos: Juego[] = [];
   constructor() { }
 }

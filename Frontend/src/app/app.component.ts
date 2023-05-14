@@ -22,7 +22,7 @@ interface Juego {
 })
 
 export class AppComponent {
-  constructor(private http: HttpClient, private router: Router, private sharedService: SharedService) {
+  constructor(private http: HttpClient, public router: Router, private sharedService: SharedService) {
     console.log("Entro router " + this.router.url)
   }
 
