@@ -32,7 +32,7 @@ export class AppComponent {
 
   buscarValor() {
     console.log("Buscando " + this.searchValue);
-    this.http.post<Juego[]>('http://localhost:5000/searchGame', { nombre: this.searchValue }).subscribe(
+    this.http.post<Juego[]>('http://140.84.168.62:5000/searchGame', { nombre: this.searchValue }).subscribe(
       (response) => {
         this.sharedService.juegos = response;
         this.error = '';

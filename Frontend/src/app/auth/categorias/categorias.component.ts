@@ -71,7 +71,7 @@ export class CategoriasComponent {
 
   showCategory() {
     const searchValue = this.categoryNamesES[this.indiceCategoriaActual];
-    this.http.post('http://localhost:5000/filterByCategory', { category: searchValue }).subscribe(
+    this.http.post('http://140.84.168.62:5000/filterByCategory', { category: searchValue }).subscribe(
       (response: Object) => { 
         if (Array.isArray(response) && response.length > 0) {
           response.forEach((game: any) => {
