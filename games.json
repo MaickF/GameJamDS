@@ -1,190 +1,330 @@
 [{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c444c"
-  },
   "engine": "Unreal Engine 4",
   "nombre": "Doom",
-  "categoria": "Acción"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c444d"
+  "categoria": "Acción",
+  "evento": {
+    "fecha": "10/04/2020",
+    "lugar": "Estados Unidos-Ohio"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Fox Engine",
   "nombre": "Metal Gear Solid V: The Phantom Pain",
-  "categoria": "Acción"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c444e"
+  "categoria": "Acción",
+  "evento": {
+    "fecha": "10/04/2015",
+    "lugar": "Japón-Tokio"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
   "engine": "Frostbite 3",
   "nombre": "Battlefield 1",
-  "categoria": "Acción"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c444f"
+  "categoria": "Acción",
+  "evento": {
+    "fecha": "10/04/2016",
+    "lugar": "Estados Unidos-California"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
   "engine": "Unity",
   "nombre": "Firewatch",
-  "categoria": "Aventura"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4450"
+  "categoria": "Aventura",
+  "evento": {
+    "fecha": "10/04/2016",
+    "lugar": "Estados Unidos-Wyoming"
   },
+  "rating": "Teen",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "CryEngine",
   "nombre": "Ryse: Son of Rome",
-  "categoria": "Aventura"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4451"
+  "categoria": "Aventura",
+  "evento": {
+    "fecha": "10/04/2013",
+    "lugar": "Reino Unido-Londres"
   },
+  "rating": "Mature",
+  "plataforma": "PC, Xbox One"
+},
+{
   "engine": "Decima",
   "nombre": "Horizon Zero Dawn",
-  "categoria": "Aventura"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4452"
+  "categoria": "Aventura",
+  "evento": {
+    "fecha": "10/04/2017",
+    "lugar": "Países Bajos-Amsterdam"
   },
+  "rating": "Teen",
+  "plataforma": "PlayStation 4, PlayStation 5"
+},
+{
+  "engine": "Unreal Engine 4",
+  "nombre": "Assassin's Creed Odyssey",
+  "categoria": "Arrow",
+  "evento": {
+    "fecha": "10/04/2018",
+    "lugar": "Francia-París"
+  },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
+  "engine": "CryEngine",
+  "nombre": "Crysis 3",
+  "categoria": "Arrow",
+  "evento": {
+    "fecha": "10/04/2013",
+    "lugar": "Alemania-Frankfurt"
+  },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 3, Xbox 360"
+},
+{
+  "engine": "Snowdrop Engine",
+  "nombre": "The Division 2",
+  "categoria": "Arrow",
+  "evento": {
+    "fecha": "10/04/2019",
+    "lugar": "Estados Unidos-Washington D.C."
+  },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
   "engine": "Unreal Engine 4",
   "nombre": "Resident Evil 7: Biohazard",
-  "categoria": "Horror"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4453"
+  "categoria": "Horror",
+  "evento": {
+    "fecha": "10/04/2017",
+    "lugar": "Japón-Tokio"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Id Tech 7",
   "nombre": "Doom Eternal",
-  "categoria": "Horror"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4454"
+  "categoria": "Horror",
+  "evento": {
+    "fecha": "10/04/2020",
+    "lugar": "Estados Unidos-Texas"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Unity",
   "nombre": "Layers of Fear",
-  "categoria": "Horror"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4455"
+  "categoria": "Horror",
+  "evento": {
+    "fecha": "10/04/2016",
+    "lugar": "Polonia-Cracovia"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Unity",
   "nombre": "Hollow Knight",
-  "categoria": "Metroidvania"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4456"
+  "categoria": "Metroidvania",
+  "evento": {
+    "fecha": "10/04/2017",
+    "lugar": "Australia-Sídney"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "GameMaker Studio 2",
   "nombre": "Dead Cells",
-  "categoria": "Metroidvania"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4457"
+  "categoria": "Metroidvania",
+  "evento": {
+    "fecha": "10/04/2018",
+    "lugar": "Francia-Lyon"
   },
+  "rating": "Teen",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Unity",
   "nombre": "Ori and the Will of the Wisps",
-  "categoria": "Metroidvania"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4458"
+  "categoria": "Metroidvania",
+  "evento": {
+    "fecha": "10/04/2020",
+    "lugar": "Estados Unidos-Washington"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, Xbox One, Nintendo Switch"
+},
+{
   "engine": "ForzaTech",
   "nombre": "Forza Horizon 4",
-  "categoria": "Carreras"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4459"
+  "categoria": "Carreras",
+  "evento": {
+    "fecha": "10/04/2018",
+    "lugar": "Reino Unido-Londres"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, Xbox One"
+},
+{
   "engine": "Frostbite 3",
   "nombre": "Need for Speed Heat",
-  "categoria": "Carreras"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c445a"
+  "categoria": "Carreras",
+  "evento": {
+    "fecha": "10/04/2019",
+    "lugar": "Brasil-São Paulo"
   },
+  "rating": "Teen",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
   "engine": "Unreal Engine 4",
   "nombre": "Project Cars 3",
-  "categoria": "Carreras"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c445b"
+  "categoria": "Carreras",
+  "evento": {
+    "fecha": "10/04/2020",
+    "lugar": "Estados Unidos-California"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
   "engine": "Creation Engine",
   "nombre": "The Elder Scrolls V: Skyrim",
-  "categoria": "Rol"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c445c"
+  "categoria": "Rol",
+  "evento": {
+    "fecha": "10/04/2011",
+    "lugar": "Estados Unidos-Texas"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Divinity Engine 2.0",
   "nombre": "Divinity: Original Sin II",
-  "categoria": "Rol"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c445d"
+  "categoria": "Rol",
+  "evento": {
+    "fecha": "10/04/2017",
+    "lugar": "Bélgica-Bruselas"
   },
+  "rating": "Teen",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Unity",
   "nombre": "Disco Elysium",
-  "categoria": "Rol"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c445e"
+  "categoria": "Rol",
+  "evento": {
+    "fecha": "10/04/2019",
+    "lugar": "Estonia-Tallin"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Cities: Skylines Engine",
   "nombre": "Cities: Skylines",
-  "categoria": "Simulación"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c445f"
+  "categoria": "Simulación",
+  "evento": {
+    "fecha": "10/04/2015",
+    "lugar": "Finlandia-Helsinki"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Farming Simulator Engine",
   "nombre": "Farming Simulator 19",
-  "categoria": "Simulación"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4460"
+  "categoria": "Simulación",
+  "evento": {
+    "fecha": "10/04/2018",
+    "lugar": "Alemania-Hannover"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+},
+{
   "engine": "Planet Coaster Engine",
   "nombre": "Planet Coaster",
-  "categoria": "Simulación"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4461"
+  "categoria": "Simulación",
+  "evento": {
+    "fecha": "10/04/2016",
+    "lugar": "Reino Unido-Derby"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
   "engine": "EA Sports Ignite",
   "nombre": "FIFA 22",
-  "categoria": "Deportes"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4462"
+  "categoria": "Deportes",
+  "evento": {
+    "fecha": "10/04/2021",
+    "lugar": "España-Madrid"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch"
+},
+{
   "engine": "NBA 2K Engine",
   "nombre": "NBA 2K22",
-  "categoria": "Deportes"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4463"
+  "categoria": "Deportes",
+  "evento": {
+    "fecha": "10/04/2022",
+    "lugar": "Estados Unidos-Los Ángeles"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch"
+},
+{
   "engine": "EA Sports Ignite",
   "nombre": "Madden NFL 22",
-  "categoria": "Deportes"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4464"
+  "categoria": "Deportes",
+  "evento": {
+    "fecha": "10/04/2022",
+    "lugar": "Estados Unidos-Texas"
   },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S"
+},
+{
   "engine": "Total War Engine",
   "nombre": "Total War: Warhammer II",
-  "categoria": "Estrategia"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4465"
+  "categoria": "Estrategia",
+  "evento": {
+    "fecha": "10/04/2017",
+    "lugar": "Reino Unido-Londres"
   },
+  "rating": "Teen",
+  "plataforma": "PC"
+},
+{
   "engine": "Frostbite 3",
   "nombre": "Battlefield V",
-  "categoria": "Estrategia"
-},{
-  "_id": {
-    "$oid": "645db9716bed203a4e3c4466"
+  "categoria": "Estrategia",
+  "evento": {
+    "fecha": "10/04/2018",
+    "lugar": "Suecia-Estocolmo"
   },
+  "rating": "Mature",
+  "plataforma": "PC, PlayStation 4, Xbox One"
+},
+{
   "engine": "Civilization Engine",
   "nombre": "Sid Meier's Civilization VI",
-  "categoria": "Estrategia"
+  "categoria": "Estrategia",
+  "evento": {
+    "fecha": "10/04/2016",
+    "lugar": "Canadá-Toronto"
+  },
+  "rating": "Everyone",
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
 }]

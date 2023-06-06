@@ -1,0 +1,115 @@
+[
+    {
+      "usuario": "juangarcia",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "mariarodriguez",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "johnsmith",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "lauraperez",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "michaelbrown",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "analopez",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "davidmartinez",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "emilyjohnson",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "lucasfernandez",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "sophiabrown",
+      "evento": {
+        "fecha": "10/04/2021",
+        "lugar": "México-Chihuahua"
+      }
+    },
+    {
+      "usuario": "carlosgutierrez",
+      "evento": {
+        "fecha": "10/04/2022",
+        "lugar": "España-Madrid"
+      }
+    },
+    {
+      "usuario": "isabellaramos",
+      "evento": {
+        "fecha": "10/04/2022",
+        "lugar": "España-Madrid"
+      }
+    },
+    {
+      "usuario": "danielhernandez",
+      "evento": {
+        "fecha": "10/04/2022",
+        "lugar": "España-Madrid"
+      }
+    },
+    {
+      "usuario": "olivialima",
+      "evento": {
+        "fecha": "10/04/2022",
+        "lugar": "España-Madrid"
+      }
+    },
+    {
+      "usuario": "alejandrovargas",
+      "evento": {
+        "fecha": "10/04/2022",
+        "lugar": "España-Madrid"
+      }
+    },
+    {
+      "usuario": "sofiagomez",
+      "evento": {
+        "fecha": "10/04/2022",
+        "lugar": "España-Madrid"
+      }
+    }
+  ]
+  
