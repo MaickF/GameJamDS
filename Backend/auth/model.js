@@ -1,8 +1,20 @@
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
-  correo: String,
-  contrasenha: String
+  nombre: String,
+  contrasenha: String,
+  apellido1: String,
+  apellido2: String,
+  correoElectronico: String,
+  telefono: String,
+  universidad: String,
+  especialidad: String,
+  condicionMedica: String,
+  necesidadDietetica: String,
+  codigoDePais: String,
+  rol: String,
+  pais: String,
+  ciudad: String
 }, {versionKey: false});
 
 const eventSchema = mongoose.Schema({
@@ -43,6 +55,12 @@ const rateSchema = mongoose.Schema({
   calDesempate: String
 }, {versionKey: false});
 
+const gameReportSchema = mongoose.Schema({
+  tipo: String,
+  descripcion: String,
+  juego: String
+}, {versionKey: false});
+
 module.exports = {
   userSchema,
   eventSchema,
@@ -51,5 +69,6 @@ module.exports = {
   placeSchema,
   feedbackSchema,
   rolSchema,
-  rateSchema
+  rateSchema,
+  gameReportSchema
 }

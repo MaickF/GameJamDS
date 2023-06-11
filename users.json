@@ -1,7 +1,6 @@
 [
   {
     "nombre": "Juan",
-    "usuario": "juangarcia",
     "contrasenha": "1234",
     "apellido1": "García",
     "apellido2": "López",
@@ -20,7 +19,6 @@
   },
   {
     "nombre": "Maria",
-    "usuario": "mariarodriguez",
     "contrasenha": "1234",
     "apellido1": "Rodríguez",
     "apellido2": "Sánchez",
@@ -40,7 +38,6 @@
   {
     "nombre": "John",
     "contrasenha": "1234",
-    "usuario": "johnsmith",
     "apellido1": "Smith",
     "apellido2": null,
     "correoElectronico": "john.smith@example.com",
@@ -59,7 +56,6 @@
   {
     "nombre": "Laura",
     "contrasenha": "1234",
-    "usuario": "LauraPérez",
     "apellido1": "Pérez",
     "apellido2": "González",
     "correoElectronico": "laura.perez@example.com",
@@ -78,7 +74,6 @@
   {
     "nombre": "Michael",
     "contrasenha": "1234",
-    "usuario": "michaelbrown",
     "apellido1": "Brown",
     "apellido2": "Davis",
     "correoElectronico": "michael.brown@example.com",
@@ -96,7 +91,6 @@
   },{
     "nombre": "Ana",
     "contrasenha": "1234",
-    "usuario": "analopez",
     "apellido1": "López",
     "apellido2": "González",
     "correoElectronico": "ana.lopez@example.com",
@@ -115,7 +109,6 @@
   {
     "nombre": "David",
     "contrasenha": "1234",
-    "usuario": "davidmartinez",
     "apellido1": "Martínez",
     "apellido2": "Rodríguez",
     "correoElectronico": "david.martinez@example.com",
@@ -134,7 +127,6 @@
   {
     "nombre": "Emily",
     "contrasenha": "1234",
-    "usuario": "emilyjohnson",
     "apellido1": "Johnson",
     "apellido2": null,
     "correoElectronico": "emily.johnson@example.com",
@@ -153,7 +145,6 @@
   {
     "nombre": "Lucas",
     "contrasenha": "1234",
-    "usuario": "lucasfernandez",
     "apellido1": "Fernández",
     "apellido2": "Silva",
     "correoElectronico": "lucas.fernandez@example.com",
@@ -172,7 +163,6 @@
   {
     "nombre": "Sophia",
     "contrasenha": "1234",
-    "usuario": "sophiabrown",
     "apellido1": "Brown",
     "apellido2": "Davis",
     "correoElectronico": "sophia.brown@example.com",
@@ -191,7 +181,6 @@
   {
     "nombre": "Carlos",
     "contrasenha": "1234",
-    "usuario": "carlosgutierrez",
     "apellido1": "Gutiérrez",
     "apellido2": "Mendoza",
     "correoElectronico": "carlos.gutierrez@example.com",
@@ -210,7 +199,6 @@
   {
     "nombre": "Isabella",
     "contrasenha": "1234",
-    "usuario": "isabellaramos",
     "apellido1": "Ramos",
     "apellido2": "Santos",
     "correoElectronico": "isabella.ramos@example.com",
@@ -229,7 +217,6 @@
   {
     "nombre": "Daniel",
     "contrasenha": "1234",
-    "usuario": "danielhernandez",
     "apellido1": "Hernández",
     "apellido2": "Torres",
     "correoElectronico": "daniel.hernandez@example.com",
@@ -247,7 +234,6 @@
   },
   {
     "nombre": "Olivia",
-    "usuario": "olivialima",
     "contrasenha": "1234",
     "apellido1": "Lima",
     "apellido2": "Silva",
@@ -267,7 +253,6 @@
   {
     "nombre": "Alejandro",
     "contrasenha": "1234",
-    "usuario": "alejandrovargas",
     "apellido1": "Vargas",
     "apellido2": "Pérez",
     "correoElectronico": "alejandro.vargas@example.com",
@@ -286,7 +271,6 @@
   {
     "nombre": "Sofia",
     "contrasenha": "1234",
-    "usuario": "sofiagomez",
     "apellido1": "Gómez",
     "apellido2": "Hernández",
     "correoElectronico": "sofia.gomez@example.com",

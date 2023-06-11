@@ -1,0 +1,28 @@
+<html>
+<body>
+<div class="container">
+    <div class="login">  
+      <h4 class="login-header">Informacion personal</h4>
+  
+      <form [formGroup]="registroForm" class="login-container" (ngSubmit)="navegarSiguiente()">
+        <p>
+          <input type="text" formControlName="universidad" placeholder="Universidad">
+        </p>
+        <p>
+          <input type="text" formControlName="especialidad" placeholder="Especialidad">
+        </p>
+        <p>
+          <input type="text" formControlName="condicionMedica" placeholder="Condicion Medica">
+        </p>
+        <p>
+          <input type="text" formControlName="necesidadDietetica" placeholder="Necesidad dietetica">
+        </p>
+        <p class="row center">
+          <button (click)="navegarAnterior()">back</button>
+          <input type="submit" value="next">
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

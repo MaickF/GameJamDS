@@ -4,7 +4,7 @@ const Usuario = require('./Usuario');
 const SECRET_KEY = 'secretkey123456';
 const mongoose = require('mongoose');
 
-const { User, Event, Game, Category, Place, Feedback, Rol, Rate } = require('./dao');
+const { User, Event, Game, Category, Place, Feedback, Rol, Rate, GameReport } = require('./dao');
 
 exports.prueba = (req, res) => {
   res.send('Hello from home');
@@ -36,20 +36,44 @@ exports.getEventList = (req, res) => {
 
 exports.createUser = (req, res, next) => {
   console.log("registro");
-  const correo = req.body.correo;
+  const correoElectronico = req.body.correoElectronico;
   const contrasenha = req.body.contrasenha;
-  console.log(correo);
+  const nombre= req.body.nombre;
+  const apellido1= req.body.apellido1;
+  const apellido2= req.body.apellido2;
+  const telefono= req.body.telefono;
+  const universidad= req.body.universidad;
+  const especialidad= req.body.especialidad;
+  const condicionMedica= req.body.condicionMedica;
+  const necesidadDietetica= req.body.necesidadDietetica;
+  const codigoDePais= req.body.codigoDePais;
+  const pais= req.body.pais;
+  const ciudad= req.body.ciudad;
+  console.log(correoElectronico);
   console.log(contrasenha);
-  User.findOne({ correo: correo })
+  let dataUser = {};
+  User.findOne({ correoElectronico: correoElectronico })
     .exec()
     .then((usuario) => {
       console.log(usuario);
       if (usuario) {
         console.log('El usuario ya existe');
-        res.redirect('/register');
+        res.send({dataUser});
       } else {
         console.log("ffffffffffffffff");
-        const user = new User({ correo, contrasenha });
+        const user = new User({ nombre: nombre,
+          contrasenha: contrasenha,
+          apellido1: apellido1,
+          apellido2: apellido2,
+          correoElectronico: correoElectronico,
+          telefono: telefono,
+          universidad: universidad,
+          especialidad: especialidad,
+          condicionMedica: condicionMedica,
+          necesidadDietetica: necesidadDietetica,
+          codigoDePais: codigoDePais,
+          pais: pais,
+          ciudad: ciudad });
         user.save()
           .then(() => {
             const payload = {
@@ -59,9 +83,9 @@ exports.createUser = (req, res, next) => {
               expiresIn: '7d'
             });
             const expiresIn = 24 * 60 * 60;
-            const dataUser = {
-              name: correo,
-              email:correo,
+            dataUser = {
+              name: correoElectronico,
+              correo:correoElectronico,
               accessToken: token,
               expiresIn: expiresIn
             }
@@ -72,7 +96,53 @@ exports.createUser = (req, res, next) => {
     .catch((err) => {
       console.log(err);
       res.redirect('/');
-      res.status(500).send('Oocurrió un error al procesar la solicitud');
+      res.status(500).send('Ocurrió un error al procesar la solicitud');
+    });
+}
+
+exports.reportGame = (req, res, next) => {
+  console.log("reporte de juego");
+  const tipo = req.body.tipo;
+  const descripcion = req.body.descripcion;
+  const juego= req.body.juego;
+  let dataReport = {};
+        console.log("ffffffffffffffff");
+        const report = new GameReport({ tipo: tipo, descripcion: descripcion, juego: juego});
+        report.save()
+          .then(() => {
+            dataReport = {
+              tipo: tipo,
+              descripcion: descripcion,
+              juego: juego
+            }
+            res.send({dataReport});
+          })
+  }
+
+
+exports.validateUser = (req, res, next) => {
+  console.log("validacion");
+  const correo = req.body.correoElectronico;
+  let dataUser = {};
+  User.findOne({ correo: correo })
+    .exec()
+    .then((usuario) => {
+      console.log(usuario);
+      if (usuario) {
+        console.log('El usuario ya existe');
+        res.send({dataUser});
+      } else {
+        console.log("ffffffffffffffff");
+            dataUser = {
+              noExiste: "true"
+            }
+            res.send({dataUser});
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.redirect('/');
+      res.status(500).send('Ocurrió un error al procesar la solicitud');
     });
 }
 

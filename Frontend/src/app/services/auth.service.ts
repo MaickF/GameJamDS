@@ -1,28 +1,56 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserI } from '../models/user';
+import { ReportI } from '../models/report';
 import { JwtResponseI } from '../models/jwt-response';
-import { tap } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-  AUTH_SERVER: string = 'http://140.84.168.62:5000';
+  AUTH_SERVER: string = 'http://localhost:5000';
   authSubject = new BehaviorSubject(false);
   private token: string = '';
   constructor(private httpClient: HttpClient) { }
 
-  register(user:UserI): Observable<JwtResponseI>{
-    return this.httpClient.post<JwtResponseI>(`${this.AUTH_SERVER}/register`,
-    user).pipe(tap(
-      (res:JwtResponseI)=>{
-        if(res){
-          //guardar token
-          this.saveToken(res.dataUser.accessToken, res.dataUser.expiresIn)
-        }
+  register(user: UserI): void {
+    this.httpClient.post<any>(`${this.AUTH_SERVER}/register`, user).subscribe(
+      (res: any) => {
+        console.log(res); // Aquí puedes trabajar con la respuesta
+      },
+      (error) => {
+        console.error(error); // Manejo de errores
       }
-    ));
+    );
+  }
+
+  gameReport(report: ReportI): void {
+    this.httpClient.post<any>(`${this.AUTH_SERVER}/reportGame`, report).subscribe(
+      (res: any) => {
+        console.log(res); // Aquí puedes trabajar con la respuesta
+      },
+      (error) => {
+        console.error(error); // Manejo de errores
+      }
+    );
+  }
+
+  userValidate(user: UserI): Observable<boolean> {
+    console.log(user);
+    return this.httpClient.post<any>(`${this.AUTH_SERVER}/userValidate`, user).pipe(
+      tap((res) => console.log(res)), // Imprimir el resultado en la consola
+      map((res) => {
+        if (res) {
+          // Verificar si los atributos están vacíos
+          const areAttributesEmpty = !res.dataUser || !res.dataUser.noExiste;
+  
+          return !areAttributesEmpty; // Retorna true si los atributos no están vacíos
+        }
+  
+        return false; // Retorna false si la respuesta es falsy
+      })
+    );
   }
 
   login(user:UserI): Observable<JwtResponseI>{
