@@ -207,6 +207,26 @@ exports.filterByCategory = (req, res, next) => {
     });
 };
 
+exports.getAllGames = (req, res, next) => {
+  console.log("Obteniendo todos los juegos");
+  Game.find()
+    .exec()
+    .then((Game) => {
+      if (Game.length > 0) {
+        console.log('Juegos encontrados!');
+        //console.log(Game); // Imprimir el JSON encontrado en la consola del servidor
+        res.json(Game); // Enviar el JSON encontrado como respuesta al cliente
+      } else {
+        console.log("Juegos NO encontrados...");
+        res.json([]); // Enviar un array vacío como respuesta al cliente si no se encontraron juegos
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ error: 'Error en el servidor' }); // Enviar un error como respuesta al cliente si ocurre un error en el servidor
+    });
+};
+
 exports.searchGame = (req, res, next) => {
   const nombre = req.body.nombre;
   console.log(nombre);

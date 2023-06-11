@@ -7,9 +7,9 @@
     "lugar": "Estados Unidos-Ohio"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Doom es un juego de acción desarrollado con Unreal Engine 4. Se lanzó el 10 de abril de 2020 en Estados Unidos, específicamente en Ohio. El juego está clasificado como 'Mature' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Fox Engine",
   "nombre": "Metal Gear Solid V: The Phantom Pain",
   "categoria": "Acción",
@@ -18,9 +18,9 @@
     "lugar": "Japón-Tokio"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "Metal Gear Solid V: The Phantom Pain es un juego de acción desarrollado con Fox Engine. Fue lanzado el 10 de abril de 2015 en Japón, específicamente en Tokio. El juego está clasificado como 'Mature' y está disponible en PC, PlayStation 4 y Xbox One."
+},{
   "engine": "Frostbite 3",
   "nombre": "Battlefield 1",
   "categoria": "Acción",
@@ -29,9 +29,9 @@
     "lugar": "Estados Unidos-California"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "Battlefield 1 es un juego de acción desarrollado con Frostbite 3. Se lanzó el 10 de abril de 2016 en Estados Unidos, específicamente en California. El juego está clasificado como 'Mature' y está disponible en PC, PlayStation 4 y Xbox One."
+},{
   "engine": "Unity",
   "nombre": "Firewatch",
   "categoria": "Aventura",
@@ -40,9 +40,9 @@
     "lugar": "Estados Unidos-Wyoming"
   },
   "rating": "Teen",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Firewatch es un juego de aventura desarrollado con Unity. Se lanzó el 10 de abril de 2016 en Estados Unidos, específicamente en Wyoming. El juego está clasificado como 'Teen' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "CryEngine",
   "nombre": "Ryse: Son of Rome",
   "categoria": "Aventura",
@@ -51,9 +51,9 @@
     "lugar": "Reino Unido-Londres"
   },
   "rating": "Mature",
-  "plataforma": "PC, Xbox One"
-},
-{
+  "plataforma": "PC, Xbox One",
+  "descripcion": "Ryse: Son of Rome es un juego de aventura desarrollado con el motor CryEngine. Fue lanzado el 10 de abril de 2013 en el evento que tuvo lugar en Reino Unido-Londres. El juego está clasificado como 'Mature' y está disponible en las plataformas PC y Xbox One."
+},{
   "engine": "Decima",
   "nombre": "Horizon Zero Dawn",
   "categoria": "Aventura",
@@ -62,42 +62,42 @@
     "lugar": "Países Bajos-Amsterdam"
   },
   "rating": "Teen",
-  "plataforma": "PlayStation 4, PlayStation 5"
-},
-{
+  "plataforma": "PlayStation 4, PlayStation 5",
+  "descripcion": "Horizon Zero Dawn es un juego de aventura desarrollado con el motor Decima. Fue lanzado el 10 de abril de 2017 en el evento que tuvo lugar en Países Bajos-Amsterdam. El juego está clasificado como 'Teen' y está disponible en las plataformas PlayStation 4 y PlayStation 5."
+},{
   "engine": "Unreal Engine 4",
   "nombre": "Assassin's Creed Odyssey",
-  "categoria": "Arrow",
+  "categoria": "Acción",
   "evento": {
     "fecha": "10/04/2018",
     "lugar": "Francia-París"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "Assassin's Creed Odyssey es un juego de acción desarrollado con el motor Unreal Engine 4. Fue lanzado el 10 de abril de 2018 en el evento que tuvo lugar en Francia-París. El juego está clasificado como 'Mature' y está disponible en las plataformas PC, PlayStation 4 y Xbox One."
+},{
   "engine": "CryEngine",
   "nombre": "Crysis 3",
-  "categoria": "Arrow",
+  "categoria": "Acción",
   "evento": {
     "fecha": "10/04/2013",
     "lugar": "Alemania-Frankfurt"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 3, Xbox 360"
-},
-{
+  "plataforma": "PC, PlayStation 3, Xbox 360",
+  "descripcion": "Crysis 3 es un juego de acción desarrollado con el motor CryEngine. Fue lanzado el 10 de abril de 2013 en el evento que tuvo lugar en Alemania-Frankfurt. El juego está clasificado como 'Mature' y está disponible en las plataformas PC, PlayStation 3 y Xbox 360."
+},{
   "engine": "Snowdrop Engine",
   "nombre": "The Division 2",
-  "categoria": "Arrow",
+  "categoria": "Acción",
   "evento": {
     "fecha": "10/04/2019",
     "lugar": "Estados Unidos-Washington D.C."
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "The Division 2 es un juego de acción desarrollado con el motor Snowdrop Engine. Fue lanzado el 10 de abril de 2019 en el evento que tuvo lugar en Estados Unidos-Washington D.C. El juego está clasificado como 'Mature' y está disponible en las plataformas PC, PlayStation 4 y Xbox One."
+},{
   "engine": "Unreal Engine 4",
   "nombre": "Resident Evil 7: Biohazard",
   "categoria": "Horror",
@@ -106,9 +106,9 @@
     "lugar": "Japón-Tokio"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Resident Evil 7: Biohazard es un juego de horror desarrollado con Unreal Engine 4. Fue lanzado el 10 de abril de 2017 en Japón, en la ciudad de Tokio. El juego está clasificado como 'Mature' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Id Tech 7",
   "nombre": "Doom Eternal",
   "categoria": "Horror",
@@ -117,9 +117,9 @@
     "lugar": "Estados Unidos-Texas"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Doom Eternal es un juego de horror desarrollado con Id Tech 7. Fue lanzado el 10 de abril de 2020 en Estados Unidos, en el estado de Texas. El juego está clasificado como 'Mature' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Unity",
   "nombre": "Layers of Fear",
   "categoria": "Horror",
@@ -128,9 +128,9 @@
     "lugar": "Polonia-Cracovia"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Layers of Fear es un juego de horror desarrollado con Unity. Fue lanzado el 10 de abril de 2016 en Polonia, en la ciudad de Cracovia. El juego está clasificado como 'Mature' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Unity",
   "nombre": "Hollow Knight",
   "categoria": "Metroidvania",
@@ -139,9 +139,9 @@
     "lugar": "Australia-Sídney"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Hollow Knight es un juego de Metroidvania desarrollado con Unity. Fue lanzado el 10 de abril de 2017 en Australia, en la ciudad de Sídney. El juego está clasificado como 'Everyone' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "GameMaker Studio 2",
   "nombre": "Dead Cells",
   "categoria": "Metroidvania",
@@ -150,9 +150,9 @@
     "lugar": "Francia-Lyon"
   },
   "rating": "Teen",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Dead Cells es un juego de Metroidvania desarrollado con GameMaker Studio 2. Fue lanzado el 10 de abril de 2018 en Francia, en la ciudad de Lyon. El juego está clasificado como 'Teen' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Unity",
   "nombre": "Ori and the Will of the Wisps",
   "categoria": "Metroidvania",
@@ -161,9 +161,9 @@
     "lugar": "Estados Unidos-Washington"
   },
   "rating": "Everyone",
-  "plataforma": "PC, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, Xbox One, Nintendo Switch",
+  "descripcion": "Ori and the Will of the Wisps es un juego de aventuras de estilo metroidvania. Fue desarrollado utilizando el motor Unity y fue lanzado el 10 de abril de 2020 en Estados Unidos, específicamente en Washington. El juego está clasificado como apto para todos los públicos y está disponible en PC, Xbox One y Nintendo Switch."
+},{
   "engine": "ForzaTech",
   "nombre": "Forza Horizon 4",
   "categoria": "Carreras",
@@ -172,9 +172,9 @@
     "lugar": "Reino Unido-Londres"
   },
   "rating": "Everyone",
-  "plataforma": "PC, Xbox One"
-},
-{
+  "plataforma": "PC, Xbox One",
+  "descripcion": "Forza Horizon 4 es un juego de carreras desarrollado utilizando el motor ForzaTech. Fue lanzado el 10 de abril de 2018 en Reino Unido, específicamente en Londres. El juego está clasificado como apto para todos los públicos y está disponible en PC y Xbox One."
+},{
   "engine": "Frostbite 3",
   "nombre": "Need for Speed Heat",
   "categoria": "Carreras",
@@ -183,9 +183,9 @@
     "lugar": "Brasil-São Paulo"
   },
   "rating": "Teen",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "Need for Speed Heat es un juego de carreras desarrollado utilizando el motor Frostbite 3. Fue lanzado el 10 de abril de 2019 en Brasil, específicamente en São Paulo. El juego está clasificado como apto para adolescentes y está disponible en PC, PlayStation 4 y Xbox One."
+},{
   "engine": "Unreal Engine 4",
   "nombre": "Project Cars 3",
   "categoria": "Carreras",
@@ -194,9 +194,9 @@
     "lugar": "Estados Unidos-California"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "Project Cars 3 es un juego de carreras desarrollado utilizando el motor Unreal Engine 4. Fue lanzado el 10 de abril de 2020 en Estados Unidos, específicamente en California. El juego está clasificado como apto para todos los públicos y está disponible en PC, PlayStation 4 y Xbox One."
+},{
   "engine": "Creation Engine",
   "nombre": "The Elder Scrolls V: Skyrim",
   "categoria": "Rol",
@@ -205,9 +205,9 @@
     "lugar": "Estados Unidos-Texas"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "The Elder Scrolls V: Skyrim es un juego de rol desarrollado utilizando el motor Creation Engine. Fue lanzado el 10 de abril de 2011 en Estados Unidos, específicamente en Texas. El juego está clasificado como apto para mayores de edad y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Divinity Engine 2.0",
   "nombre": "Divinity: Original Sin II",
   "categoria": "Rol",
@@ -216,9 +216,9 @@
     "lugar": "Bélgica-Bruselas"
   },
   "rating": "Teen",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Divinity: Original Sin II es un juego de rol desarrollado utilizando el motor Divinity Engine 2.0. Fue lanzado el 10 de abril de 2017 en Bélgica, específicamente en Bruselas. El juego está clasificado como apto para adolescentes y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Unity",
   "nombre": "Disco Elysium",
   "categoria": "Rol",
@@ -227,9 +227,9 @@
     "lugar": "Estonia-Tallin"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Disco Elysium es un juego de rol desarrollado utilizando el motor Unity. Fue lanzado el 10 de abril de 2019 en Estonia, específicamente en Tallin. El juego está clasificado como apto para mayores de edad y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Cities: Skylines Engine",
   "nombre": "Cities: Skylines",
   "categoria": "Simulación",
@@ -238,9 +238,9 @@
     "lugar": "Finlandia-Helsinki"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Cities: Skylines es un juego de simulación desarrollado utilizando el motor Cities: Skylines Engine. Fue lanzado el 10 de abril de 2015 en Finlandia, específicamente en Helsinki. El juego está clasificado como apto para todos los públicos y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Farming Simulator Engine",
   "nombre": "Farming Simulator 19",
   "categoria": "Simulación",
@@ -249,9 +249,9 @@
     "lugar": "Alemania-Hannover"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Farming Simulator 19 es un juego de simulación desarrollado utilizando el motor Farming Simulator Engine. Fue lanzado el 10 de abril de 2018 en Alemania, específicamente en Hannover. El juego está clasificado como apto para todos los públicos y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
+},{
   "engine": "Planet Coaster Engine",
   "nombre": "Planet Coaster",
   "categoria": "Simulación",
@@ -260,9 +260,9 @@
     "lugar": "Reino Unido-Derby"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "Planet Coaster es un juego de simulación desarrollado utilizando el motor Planet Coaster Engine. Fue lanzado el 10 de abril de 2016 en Reino Unido, específicamente en Derby. El juego está clasificado como apto para todos los públicos y está disponible en PC, PlayStation 4 y Xbox One."
+},{
   "engine": "EA Sports Ignite",
   "nombre": "FIFA 22",
   "categoria": "Deportes",
@@ -271,9 +271,9 @@
     "lugar": "España-Madrid"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch",
+  "descripcion": "FIFA 22 es un juego de deportes desarrollado utilizando el motor EA Sports Ignite. Fue lanzado el 10 de abril de 2021 en España, específicamente en Madrid. El juego está clasificado como apto para todos los públicos y está disponible en PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S y Nintendo Switch."
+},{
   "engine": "NBA 2K Engine",
   "nombre": "NBA 2K22",
   "categoria": "Deportes",
@@ -282,9 +282,9 @@
     "lugar": "Estados Unidos-Los Ángeles"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch"
-},
-{
+  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S, Nintendo Switch",
+  "descripcion": "NBA 2K22 es un juego de deportes desarrollado utilizando el motor NBA 2K Engine. Fue lanzado el 10 de abril de 2022 en Estados Unidos, específicamente en Los Ángeles. El juego está clasificado como apto para todos los públicos y está disponible en PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S y Nintendo Switch."
+},{
   "engine": "EA Sports Ignite",
   "nombre": "Madden NFL 22",
   "categoria": "Deportes",
@@ -293,9 +293,9 @@
     "lugar": "Estados Unidos-Texas"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S"
-},
-{
+  "plataforma": "PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X/S",
+  "descripcion": "Madden NFL 22 es un juego de deportes desarrollado utilizando el motor EA Sports Ignite. Fue lanzado el 10 de abril de 2022 en Estados Unidos, específicamente en Texas. El juego está clasificado como apto para todos los públicos y está disponible en PC, PlayStation 4, PlayStation 5, Xbox One y Xbox Series X/S."
+},{
   "engine": "Total War Engine",
   "nombre": "Total War: Warhammer II",
   "categoria": "Estrategia",
@@ -304,9 +304,9 @@
     "lugar": "Reino Unido-Londres"
   },
   "rating": "Teen",
-  "plataforma": "PC"
-},
-{
+  "plataforma": "PC",
+  "descripcion": "Total War: Warhammer II es un juego de estrategia desarrollado utilizando el motor Total War Engine. Fue lanzado el 10 de abril de 2017 en Reino Unido, específicamente en Londres. El juego está clasificado como apto para adolescentes y está disponible en PC."
+},{
   "engine": "Frostbite 3",
   "nombre": "Battlefield V",
   "categoria": "Estrategia",
@@ -315,9 +315,9 @@
     "lugar": "Suecia-Estocolmo"
   },
   "rating": "Mature",
-  "plataforma": "PC, PlayStation 4, Xbox One"
-},
-{
+  "plataforma": "PC, PlayStation 4, Xbox One",
+  "descripcion": "Battlefield V es un juego de estrategia desarrollado con el motor Frostbite 3. Fue lanzado el 10 de abril de 2018 en Estocolmo, Suecia. El juego está clasificado como 'Mature' y está disponible en PC, PlayStation 4 y Xbox One."
+},{
   "engine": "Civilization Engine",
   "nombre": "Sid Meier's Civilization VI",
   "categoria": "Estrategia",
@@ -326,5 +326,6 @@
     "lugar": "Canadá-Toronto"
   },
   "rating": "Everyone",
-  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch"
+  "plataforma": "PC, PlayStation 4, Xbox One, Nintendo Switch",
+  "descripcion": "Sid Meier's Civilization VI es un juego de estrategia desarrollado con el motor Civilization Engine. Fue lanzado el 10 de abril de 2016 en Toronto, Canadá. El juego está clasificado como 'Everyone' y está disponible en PC, PlayStation 4, Xbox One y Nintendo Switch."
 }]
