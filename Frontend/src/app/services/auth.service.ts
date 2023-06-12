@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { UserI } from '../models/user';
 import { ReportI } from '../models/report';
 import { JwtResponseI } from '../models/jwt-response';
@@ -74,6 +74,11 @@ export class AuthService {
 
   getEvents(): Observable<any> {
     return this.httpClient.get<any>(`${this.AUTH_SERVER}/events`);
+  }
+
+  getGame(game:string): Observable<any> {
+    const params = new HttpParams().set('juego', game);
+    return this.httpClient.get<any>(`${this.AUTH_SERVER}/getGame`,  { params });
   }
 
   private saveToken(token: string, expiresIn: string):void{

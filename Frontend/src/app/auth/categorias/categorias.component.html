@@ -13,7 +13,7 @@
 
     <div id="juegos-container" class="juegos-container">
       <ul id="juegos-lista">
-        <li *ngFor="let juego of juegosCategoria">{{ juego }}</li>
+        <li *ngFor="let juego of juegosCategoria" (click)="onJuegoClick(juego)">{{ juego }}</li>
       </ul>
     </div>
 

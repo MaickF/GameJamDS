@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 
 
 interface Juego {
@@ -24,9 +25,24 @@ export class CategoriasComponent {
   title = 'Category';
   indiceCategoriaActual = 1;
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) {
     this.showCategory()
     console.log("Entro router "  + this.router.url)
+  }
+
+  onJuegoClick(juego: string) {
+    console.log('Se hizo clic en el juego:', juego);
+    this.authService.getGame(juego).subscribe(
+      data => {
+        localStorage.setItem("juego", JSON.stringify(data));
+        console.log(data); // Asigna los datos recibidos a la propiedad 'events'
+        this.router.navigateByUrl('/auth/juego');
+      },
+      error => {
+        console.log(error);
+      }
+    );
+    // Realiza las acciones adicionales que desees al hacer clic en un juego
   }
 
   categoryNames = ["Action", "Adventure", "Horror", "Metroidvania", "Racing", "Role-playing", "Simulation", "Sports", "Strategy"];
@@ -71,7 +87,7 @@ export class CategoriasComponent {
 
   showCategory() {
     const searchValue = this.categoryNamesES[this.indiceCategoriaActual];
-    this.http.post('http://140.84.168.62:5000/filterByCategory', { category: searchValue }).subscribe(
+    this.http.post('http://localhost:5000/filterByCategory', { category: searchValue }).subscribe(
       (response: Object) => { 
         if (Array.isArray(response) && response.length > 0) {
           response.forEach((game: any) => {

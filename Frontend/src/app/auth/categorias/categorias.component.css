@@ -10,6 +10,16 @@ body {
 .arrow-container {
   position: relative;
 }
+ul li {
+  cursor: pointer;
+}
+
+ul li:hover {
+  /* Estilos cuando el cursor está sobre el elemento */
+  /* Puedes agregar aquí los estilos deseados, por ejemplo cambiar el color de fondo o el color del texto */
+  background-color: #f0f0f0;
+  color: red;
+}
 
 .arrow-left,
 .arrow-right {

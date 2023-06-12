@@ -8,6 +8,7 @@ import { Paso1Component } from './paso1/paso1.component';
 import { Paso2Component } from './paso2/paso2.component';
 import { Paso3Component } from './paso3/paso3.component';
 import { ReporteJuegoComponent } from './reporte-juego/reporte-juego.component';
+import { JuegoComponent } from './juego/juego.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'registro/paso2', component: Paso2Component },
   {path: 'registro/paso3', component: Paso3Component },
   {path: 'reporteJuego', component: ReporteJuegoComponent },
+  {path: 'juego', component: JuegoComponent },
   {path: 'register', redirectTo: 'registro/paso1', pathMatch: 'full' },
 ];
 

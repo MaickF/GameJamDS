@@ -13,6 +13,7 @@ import { Paso2Component } from './paso2/paso2.component';
 import { Paso3Component } from './paso3/paso3.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReporteJuegoComponent } from './reporte-juego/reporte-juego.component';
+import { JuegoComponent } from './juego/juego.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ReporteJuegoComponent } from './reporte-juego/reporte-juego.component';
     Paso2Component,
     Paso3Component,
     ReporteJuegoComponent,
+    JuegoComponent,
   ],
   imports: [
     CommonModule,
