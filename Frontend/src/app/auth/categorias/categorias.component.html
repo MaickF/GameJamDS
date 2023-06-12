@@ -1,22 +1,40 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <!--  Zord categoría -->
-    <div id="categoria-container" class="arrow-container">
-      <img class="arrow-left" src="./assets/images/arrow.png" alt="Left arrow" onmouseover="this.src='./assets/images/arrow2.png'" onmouseout="this.src='./assets/images/arrow.png'" (click)="prev()">
-      <img id="categoria-previa" [src]="imagenes[(indiceCategoriaActual + 1) % imagenes.length]" alt="Previous category">
-      <img id="categoria" [src]="imagenes[indiceCategoriaActual]" alt="Current category" (click)="showCategory()">
-      <div id="categoria-texto">{{ currentCategoryName }}</div>
-      <img id="categoria-siguiente" [src]="imagenes[(indiceCategoriaActual - 1 + imagenes.length) % imagenes.length]" alt="Next category">
-      <img class="arrow-right" src="./assets/images/arrow.png" alt="Right arrow" onmouseover="this.src='./assets/images/arrow2.png'" onmouseout="this.src='./assets/images/arrow.png'" (click)="next()">
-    </div> 
-
-    <div id="juegos-container" class="juegos-container">
-      <ul id="juegos-lista">
-        <li *ngFor="let juego of juegosCategoria" (click)="onJuegoClick(juego)">{{ juego }}</li>
-      </ul>
+<div class="content">
+  <div class="sidebar">
+    <h3 class="sidebar-heading">Categories</h3>
+    <ul class="sidebar-list">
+      <li class="sidebar-item" *ngFor="let category of categories" (click)="setCategory(category)" [ngClass]="{ 
+      'grayscale': currentCategoryHover !== category && currentCategory !== category,
+      'selected': currentCategoryHover === category,
+      'zoom': currentCategoryHover === category,
+      'current-category': currentCategory === category }" (mouseenter)="highlightCategory(category)"
+        (mouseleave)="resetHighlight()">
+        <div class="category-image">
+          <img [src]="'assets/images/' + category.toLowerCase() + '.png'" alt="Category Image" width="250" height="120">
+          <div class="category-name">{{ categoriesES[category] }}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content game-grid-container">
+    <div class="game-grid">
+      <div *ngIf="games.length === 0" class="no-games-message">
+        <p> This category currently has no games. </p>
+      </div>
+      <div class="game-item" *ngFor="let game of games">
+        <div class="game-item-container">
+          <div class="game-container">
+            <div class="game-image-container">
+              <img [src]="'assets/images/game.png'" alt="Category Image">
+            </div>
+            <div class="game-details">
+              <p class="game-text">{{ "Game: " + game.nombre }}</p>
+              <p class="game-text">{{ "Description: " + game.descripcion }}</p>
+              <p class="game-text">{{ "Rating: " + game.rating }}</p>
+              <p class="game-text">{{ "Plataform: " + game.plataforma }}</p>
+            </div>
+          </div>
+        </div>
+      </div>      
     </div>
-
-  </body>
-</html>
-
+  </div>
+</div>

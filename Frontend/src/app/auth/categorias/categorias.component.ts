@@ -5,12 +5,15 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
 
 
-interface Juego {
+interface Game {
   id: number;
   nombre: string;
   descripcion: string;
+  rating: string;
+  plataforma: string;
   categoria: string;
   imagen: string;
+  engine: String;
 }
 
 @Component({
@@ -21,84 +24,64 @@ interface Juego {
 
 
 export class CategoriasComponent {
+  title: string = 'Category';
+  currentCategory: string = "All";
+  currentCategoryHover: string = "";
+  games: Game[] = [];
 
-  title = 'Category';
-  indiceCategoriaActual = 1;
+  categories: string[] = [
+    'All',
+    'Action',
+    'Adventure',
+    'Horror',
+    'Metroidvania',
+    'Racing',
+    'Role-playing',
+    'Simulation',
+    'Sports',
+    'Strategy'
+  ];
 
-  constructor(private http: HttpClient, private router: Router, private authService: AuthService) {
-    this.showCategory()
-    console.log("Entro router "  + this.router.url)
+  categoriesES: { [key: string]: string } = {
+    'All': 'Mostrar todos',
+    'Action': 'Acción',
+    'Adventure': 'Aventura',
+    'Horror': 'Horror',
+    'Metroidvania': 'Metroidvania',
+    'Racing': 'Carreras',
+    'Role-playing': 'Rol',
+    'Simulation': 'Simulación',
+    'Sports': 'Deportes',
+    'Strategy': 'Estrategia'
+  };
+  
+  constructor(private http: HttpClient, private router: Router) {
+    this.showAllGames();
+    console.log("Entro router " + this.router.url);
   }
 
-  onJuegoClick(juego: string) {
-    console.log('Se hizo clic en el juego:', juego);
-    this.authService.getGame(juego).subscribe(
-      data => {
-        localStorage.setItem("juego", JSON.stringify(data));
-        console.log(data); // Asigna los datos recibidos a la propiedad 'events'
-        this.router.navigateByUrl('/auth/juego');
-      },
-      error => {
-        console.log(error);
-      }
-    );
-    // Realiza las acciones adicionales que desees al hacer clic en un juego
-  }
 
-  categoryNames = ["Action", "Adventure", "Horror", "Metroidvania", "Racing", "Role-playing", "Simulation", "Sports", "Strategy"];
-  categoryNamesES = [ "Acción", "Aventura", "Horror", "Metroidvania", "Carreras", "Rol", "Simulación", "Deportes", "Estrategia"];
-  currentCategoryName  = this.categoryNames[this.indiceCategoriaActual];
-  imagenes = this.categoryNames.map(category => `./assets/images/${category.toLowerCase()}.png`);
-  juegosCategoria: string[] = [];
-
-
-  next() {
-    this.indiceCategoriaActual++;
-    if (this.indiceCategoriaActual >= this.imagenes.length) {
-      this.indiceCategoriaActual = 0;
+  setCategory(category: string) {
+    this.currentCategory = category;
+    if (this.currentCategory == "All"){
+      this.showAllGames();
+    } else {
+      this.showCategory(this.categoriesES[this.currentCategory]);
     }
-    this.updateCategories();
   }
 
-  prev() {
-    this.indiceCategoriaActual--;
-    if (this.indiceCategoriaActual < 0) {
-      this.indiceCategoriaActual = this.imagenes.length - 1;
-    }
-    this.updateCategories();
-  }
-
-  updateCategories() {
-    const nextIndex = (this.indiceCategoriaActual - 1 + this.imagenes.length) % this.imagenes.length;
-    const prevIndex = (this.indiceCategoriaActual + 1) % this.imagenes.length;
-    const categoriaPreviaElement: HTMLImageElement = document.getElementById("categoria-previa") as HTMLImageElement;
-    const categoriaSiguienteElement: HTMLImageElement = document.getElementById("categoria-siguiente") as HTMLImageElement;
-    categoriaPreviaElement.src = this.imagenes[prevIndex];
-    categoriaSiguienteElement.src = this.imagenes[nextIndex];
-    this.currentCategoryName  = this.categoryNames[this.indiceCategoriaActual];
-    this.setCategoryName();
-    this.showCategory();
-  }
-
-  setCategoryName() {
-    const categoriaTextoElement: HTMLDivElement = document.getElementById("categoria-texto") as HTMLDivElement;
-    categoriaTextoElement.innerText = this.currentCategoryName;
-  }
-
-  showCategory() {
-    const searchValue = this.categoryNamesES[this.indiceCategoriaActual];
-    this.http.post('http://localhost:5000/filterByCategory', { category: searchValue }).subscribe(
-      (response: Object) => { 
+  showAllGames(){
+    this.http.get('http://localhost:5000/getAllGames').subscribe(
+      (response: Object) => {
         if (Array.isArray(response) && response.length > 0) {
           response.forEach((game: any) => {
+            this.games = response;
             console.log("Nombre del juego:", game.nombre);
-            this.juegosCategoria = response.map((game: any) => game.nombre);
           });
         } else {
           console.log("La respuesta no es un array válido");
-          this.juegosCategoria = ["No existen juegos catalogados dentro de esta categoría."];
         }
-        
+
       },
       (error) => {
         console.log(error);
@@ -107,4 +90,34 @@ export class CategoriasComponent {
     console.log("Termino el showCategory");
   }
 
+  showCategory(category: string){
+    this.http.post('http://localhost:5000/filterByCategory', { category: category }).subscribe(
+      (response: Object) => {
+        if (Array.isArray(response) && response.length > 0) {
+          response.forEach((game: any) => {
+            this.games = response;
+            console.log("Nombre del juego:", game.nombre);
+          });
+        } else {
+          this.games = [];
+          console.log("La respuesta no es un array válido");
+        }
+
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+    console.log("Termino el showCategory('" + category + "')");
+  }
+
+  // Function to highlight the category
+  highlightCategory(category: string) {
+    this.currentCategoryHover = category;
+  }
+
+  // Function to reset the category highlight
+  resetHighlight() {
+    this.currentCategoryHover = '';
+  }
 }
