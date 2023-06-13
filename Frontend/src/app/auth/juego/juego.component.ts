@@ -22,6 +22,8 @@ export class JuegoComponent {
       let archivo = JSON.parse(juegoStr); // Convertir el archivo a objeto JSON
       this.juego = archivo[0];
       console.log(this.juego);
+    }else{
+      console.log("me quiero morir");
     }
   }
   reportarJuego(){

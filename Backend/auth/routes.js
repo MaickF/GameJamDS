@@ -18,4 +18,6 @@ module.exports = (router) => {
   router.post ('/getUserByID', Users.getUserByID);
   router.post ('/getUserByEmail', Users.getUserByEmail);
   router.post ('/updateUserRole', Users.updateUserRole);
+  router.post ('/registroEvaluacion', Users.registroEvaluacion);
+  router.post ('/reportProblem', Users.reportProblem);
 }

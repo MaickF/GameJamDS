@@ -36,6 +36,17 @@ export class AuthService {
     );
   }
 
+  problemReport(report: ReportI): void {
+    this.httpClient.post<any>(`${this.AUTH_SERVER}/reportProblem`, report).subscribe(
+      (res: any) => {
+        console.log(res); // Aquí puedes trabajar con la respuesta
+      },
+      (error) => {
+        console.error(error); // Manejo de errores
+      }
+    );
+  }
+
   userValidate(user: UserI): Observable<boolean> {
     console.log(user);
     return this.httpClient.post<any>(`${this.AUTH_SERVER}/userValidate`, user).pipe(
@@ -59,6 +70,7 @@ export class AuthService {
       (res:JwtResponseI)=>{
         if(res){
           //guardar token
+          localStorage.setItem("usuario", JSON.stringify(res));
           console.log(res);
           this.saveToken(res.dataUser.accessToken, res.dataUser.expiresIn)
         }
@@ -80,8 +92,8 @@ export class AuthService {
     return this.httpClient.get<any>(`${this.AUTH_SERVER}/criterios`);
   }
 
-  registrarEvaluacion(): Observable<any> {
-    return this.httpClient.get<any>(`${this.AUTH_SERVER}/criterios`);
+  registrarEvaluacion(criterio:any): Observable<any> {
+    return this.httpClient.post<any>(`${this.AUTH_SERVER}/registroEvaluacion`, criterio);
   }
 
   getGame(game:string): Observable<any> {

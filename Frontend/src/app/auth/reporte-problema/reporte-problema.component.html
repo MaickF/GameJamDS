@@ -1,0 +1,19 @@
+<html>
+<body>
+<div class="container">
+    <div class="checkboxes">
+        <label *ngFor="let categoria of categorias">
+          <input type="checkbox" name="categoria" [(ngModel)]="categoria.seleccionado" (change)="actualizarSeleccion(categoria)">
+          {{ categoria.nombre }}
+        </label>
+      </div>
+    <div class="description">
+      <label for="descripcion">Descripción del problema:</label>
+      <textarea [(ngModel)]="descripcion" id="descripcion" name="descripcion"></textarea>
+      <button class="btn" (click)="enviarReporte()">Enviar</button>
+      <p class="alert-message" *ngIf="sinMarcar">Por favor, seleccione una categoria</p>
+    </div>
+  </div>
+</body>
+</html>
+  

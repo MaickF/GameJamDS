@@ -4,7 +4,7 @@ const Usuario = require('./Usuario');
 const SECRET_KEY = 'secretkey123456';
 const mongoose = require('mongoose');
 
-const { User, Event, Game, Category, Place, Feedback, Rol, Rate, GameReport, Criterio } = require('./dao');
+const { User, Event, Game, Category, Place, Feedback, Rol, Rate, GameReport, Criterio, CriterioXJuego, ProblemReport } = require('./dao');
 
 exports.prueba = (req, res) => {
   res.send('Hello from home');
@@ -193,6 +193,47 @@ exports.reportGame = (req, res, next) => {
     })
 }
 
+exports.reportProblem = (req, res, next) => {
+  console.log("reporte de problema");
+  const tipo = req.body.tipo;
+  const descripcion = req.body.descripcion;
+  const juego = req.body.juego;
+  let dataReport = {};
+  console.log("ffffffffffffffff");
+  const report = new ProblemReport({ tipo: tipo, descripcion: descripcion, juego: juego });
+  report.save()
+    .then(() => {
+      dataReport = {
+        tipo: tipo,
+        descripcion: descripcion,
+        juego: juego
+      }
+      res.send({ dataReport });
+    })
+}
+
+exports.registroEvaluacion = (req, res, next) => {
+  console.log("registro de calificacion");
+  const criterio = req.body.nombre;
+  const nota = req.body.nota;
+  const juego = req.body.juego;
+  const juez = req.body.juez;
+  let criterioxjuegoData = {};
+  console.log("ffffffffffffffff");
+  console.log(criterio);
+  console.log(nota);
+  const criterioxjuego = new CriterioXJuego({ criterio: criterio, nota: nota, juego: juego, juez:juez });
+  criterioxjuego.save()
+    .then(() => {
+      criterioxjuegoData = {
+        criterio: criterio,
+        nota: nota,
+        juego: juego,
+        juez: juez
+      }
+      res.send({ criterioxjuegoData });
+    })
+}
 
 exports.validateUser = (req, res, next) => {
   console.log("validacion");
@@ -221,17 +262,16 @@ exports.validateUser = (req, res, next) => {
 }
 
 exports.loginUser = (req, res, next) => {
-  const correo = req.body.correo;
+  const correoElectronico = req.body.correo;
   const contrasenha = req.body.contrasenha;
-  console.log(correo);
+  console.log(correoElectronico);
   console.log(contrasenha);
-  User.findOne({ correo: correo })
+  User.findOne({ correoElectronico: correoElectronico })
     .exec()
     .then((usuario) => {
       if (usuario) {
         console.log(usuario);
         if (usuario.contrasenha === contrasenha) {
-          const actual = new Usuario(correo, contrasenha);
           const payload = {
             check: true
           };
@@ -241,8 +281,9 @@ exports.loginUser = (req, res, next) => {
           const expiresIn = 24 * 60 * 60;
           console.log(token)
           const dataUser = {
-            name: correo,
-            email: correo,
+            nombre: usuario.nombre,
+            correoElectronico: usuario.correoElectronico,
+            rol: usuario.rol,
             accessToken: token,
             expiresIn: expiresIn
           }

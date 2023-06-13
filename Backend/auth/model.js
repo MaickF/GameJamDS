@@ -39,6 +39,13 @@ const criterioSchema = mongoose.Schema({
   descripcion: String
 }, {versionKey: false});
 
+const criterioxjuegoSchema = mongoose.Schema({
+  criterio: String,
+  nota: String,
+  juego: String,
+  juez: String
+}, {versionKey: false});
+
 const placeSchema = mongoose.Schema({
   ubicacion: String,
   pais: String,
@@ -66,6 +73,12 @@ const gameReportSchema = mongoose.Schema({
   juego: String
 }, {versionKey: false});
 
+const problemReportSchema = mongoose.Schema({
+  tipo: String,
+  descripcion: String,
+  juego: String
+}, {versionKey: false});
+
 module.exports = {
   userSchema,
   eventSchema,
@@ -76,5 +89,7 @@ module.exports = {
   rolSchema,
   rateSchema,
   gameReportSchema,
-  criterioSchema
+  criterioSchema,
+  criterioxjuegoSchema,
+  problemReportSchema
 }

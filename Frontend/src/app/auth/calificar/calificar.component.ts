@@ -13,11 +13,25 @@ export class CalificarComponent {
   nota: number = 0;
   registroCriterios: any[] = [];
   ultimoCriterio: boolean = false;
+  juego:any;
+  juez:any;
 
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.obtenerCriterios();
+    const juegoStr = localStorage.getItem('juego'); // Obtener el archivo guardado en el localStorage
+    if (juegoStr !== null) {
+      let archivo = JSON.parse(juegoStr); // Convertir el archivo a objeto JSON
+      this.juego = archivo[0].nombre;
+      console.log(this.juego);
+    }
+    const juezStr = localStorage.getItem('usuario'); // Obtener el archivo guardado en el localStorage
+    if (juezStr !== null) {
+      let archivo = JSON.parse(juezStr); // Convertir el archivo a objeto JSON
+      this.juez = archivo[0].nombre;
+      console.log(this.juego);
+    }
   }
 
   obtenerCriterios(): void {
@@ -31,8 +45,10 @@ export class CalificarComponent {
 
   avanzarCriterio(): void {
     const registroCriterio = {
-      nombre: this.criterioActual.nombre,
-      nota: this.nota
+      nombre: this.criterioActual.criterio,
+      nota: this.nota,
+      juego: this.juego,
+      juez: this.juez
     };
     this.registroCriterios.push(registroCriterio);
 
@@ -49,17 +65,19 @@ export class CalificarComponent {
   }
 
   registrarEvaluacion() {
-    const criteriosEvaluados = "";/* Obtener la lista de criterios evaluados ;
-    this.authService.registrarEvaluacion(criteriosEvaluados).subscribe(
-      () => {
-        // Éxito al registrar la evaluación
-        console.log('Evaluación registrada correctamente');
-      },
-      (error: any) => {
-        // Error al registrar la evaluación
-        console.error('Error al registrar la evaluación:', error);
-      }
-    );*/
+    for (const criterio of this.registroCriterios) {
+      console.log(criterio);
+      this.authService.registrarEvaluacion(criterio).subscribe(
+        () => {
+          // Éxito al registrar la evaluación
+          console.log('Evaluación registrada correctamente');
+        },
+        (error) => {
+          // Error al registrar la evaluación
+          console.error('Error al registrar la evaluación:', error);
+        }
+      );
+    }
   }
 
   retrocederCriterio(): void {
@@ -68,5 +86,6 @@ export class CalificarComponent {
       this.criterioActual = this.criterios[indiceAnterior];
       this.nota = 0;
     }
+    this.registroCriterios.pop();
   }
 }

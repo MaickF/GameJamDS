@@ -126,6 +126,7 @@ export class CategoriasComponent {
     console.log("Cargando juego");
     this.http.post<Game>('http://localhost:5000/searchExactGame', { nombre: game.nombre }).subscribe(
       (response) => {
+        console.log(response);
         localStorage.setItem("juego", JSON.stringify(response));
         this.router.navigateByUrl('/auth/juego');
       },

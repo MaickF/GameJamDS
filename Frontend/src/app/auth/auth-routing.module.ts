@@ -12,6 +12,7 @@ import { JuegoComponent } from './juego/juego.component';
 import { EditarComponent } from './editar/editar.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { CalificarComponent } from './calificar/calificar.component';
+import { ReporteProblemaComponent } from './reporte-problema/reporte-problema.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'registro/paso2', component: Paso2Component },
   {path: 'registro/paso3', component: Paso3Component },
   {path: 'reporteJuego', component: ReporteJuegoComponent },
+  {path: 'reporteProblema', component: ReporteProblemaComponent },
   {path: 'juego', component: JuegoComponent },
   {path: 'ranking', component: RankingComponent },
   {path: 'calificar', component: CalificarComponent },

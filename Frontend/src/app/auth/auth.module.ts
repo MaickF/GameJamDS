@@ -17,6 +17,7 @@ import { JuegoComponent } from './juego/juego.component';
 import { EditarComponent } from './editar/editar.component';
 import { CalificarComponent } from './calificar/calificar.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { ReporteProblemaComponent } from './reporte-problema/reporte-problema.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RankingComponent } from './ranking/ranking.component';
     JuegoComponent,
     CalificarComponent,
     EditarComponent,
-    RankingComponent
+    RankingComponent,
+    ReporteProblemaComponent
   ],
   imports: [
     CommonModule,
