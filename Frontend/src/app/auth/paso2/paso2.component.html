@@ -1,0 +1,29 @@
+<p>paso2 works!</p>
+<html>
+<body>
+<div class="container">
+    <div class="login">  
+      <h4 class="login-header">Informacion de contacto</h4>
+  
+      <form [formGroup]="registroForm" class="login-container" (ngSubmit)="navegarSiguiente()">
+        <p>
+          <input type="text" formControlName="telefono" placeholder="Telefono">
+        </p>
+        <p>
+          <input type="text" formControlName="pais" placeholder="Pais">
+        </p>
+        <p>
+          <input type="text" formControlName="ciudad" placeholder="Ciudad">
+        </p>
+        <p>
+          <input type="text" formControlName="codigoDePais" placeholder="Codigo de pais">
+        </p>
+        <p class="row center">
+          <button (click)="navegarAnterior()">Back</button>
+          <input type="submit" value="Next">
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,5 +1,3 @@
-<router-outlet></router-outlet>
-
 <div>
   <select [(ngModel)]="selectedDate" class="custom-select">
     <option value="">Seleccionar fecha</option>
@@ -7,9 +5,9 @@
   </select>
   <div *ngIf="selectedDate" class="event-content">
     <div class="row center" style="color:rgb(229, 146, 44)">
-      <h1 class="noMarginBot">Game Jam  </h1>
-      <h2 class="noMarginBot textoBajo margenInicial">{{ getSelectedEvent()?.fechaInicio }} - </h2>
-      <h2 class="noMarginBot textoBajo">{{ getSelectedEvent()?.fechaFinal }}</h2>
+      <h1>Game Jam  </h1>
+      <h2 class="margenInicial noMarginTop">{{ getSelectedEvent()?.fechaInicio }} - </h2>
+      <h2 class="margenInicial noMarginTop">{{ getSelectedEvent()?.fechaFinal }}</h2>
     </div>
     <div class="center">
         <h3 class="noMarginTop">{{ getSelectedEvent()?.ubicacion }}</h3>
@@ -24,4 +22,5 @@
     </div>
   </div>  
 </div>
+
 

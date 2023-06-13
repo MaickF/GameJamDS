@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.container {
+    background-color: #1b5e60;
+    width: 450px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 3%;
+    color: rgb(255, 255, 255);
+  }
+
+  .alert-message {
+    color: rgb(243, 98, 98);
+  }
+
+  .btn {
+    padding: 8px 15px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #ccc;
+  }
+  
+  .checkboxes {
+    margin-bottom: 10px;
+  }
+  
+  .checkboxes label {
+    display: block;
+  }
+  
+  .checkboxes label.otros {
+    margin-top: 10px;
+  }
+  
+  .description label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .description textarea {
+    width: 100%;
+    height: 100px;
+  }

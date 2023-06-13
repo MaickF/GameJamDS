@@ -1,0 +1,32 @@
+<html>
+<body>
+<div class="container">
+    <div class="login">  
+      <h4 class="login-header">Datos generales</h4>
+  
+      <form [formGroup]="registroForm" class="login-container" (ngSubmit)="navegarSiguiente()">
+        <p>
+          <input type="text" formControlName="nombre" placeholder="Nombre">
+        </p>
+        <p>
+          <input type="text" formControlName="apellido1" placeholder="Primer apellido">
+        </p>
+        <p>
+          <input type="text" formControlName="apellido2" placeholder="Segundo apellido">
+        </p>
+        <p>
+          <input type="email" formControlName="correoElectronico" placeholder="Correo Electronico">
+        </p>
+        <p>
+          <input type="password" formControlName="contrasenha" placeholder="Contraseña">
+        </p>
+        <p>
+          <input class="center" type="submit" value="Next">
+        </p>
+          <p class="alert-message" *ngIf="existencia">Usuario ya existe</p>
+          <p class="alert-message" *ngIf="enBlanco">Hay espacios vacíos en el formulario</p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

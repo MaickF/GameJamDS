@@ -1,13 +1,289 @@
-[{
-  "_id": {
-    "$oid": "64113bf5478a26d50f273d4b"
+[
+  {
+    "nombre": "Juan",
+    "contrasenha": "1234",
+    "apellido1": "García",
+    "apellido2": "López",
+    "correoElectronico": "juangarcia@example.com",
+    "telefono": "123456789",
+    "universidad": "Universidad Nacional",
+    "especialidad": "Ingeniería Civil",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "MX",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "México",
+      "ciudad": "Ciudad de México"
+    }
   },
-  "correo": "admin2",
-  "contrasenha": "4321"
-},{
-  "_id": {
-    "$oid": "645dd069d4ef3b9b52834f9b"
+  {
+    "nombre": "Maria",
+    "contrasenha": "1234",
+    "apellido1": "Rodríguez",
+    "apellido2": "Sánchez",
+    "correoElectronico": "maria.rodriguez@example.com",
+    "telefono": "987654321",
+    "universidad": "Universidad Complutense de Madrid",
+    "especialidad": "Medicina",
+    "condicionMedica": "Asma",
+    "necesidadDietetica": "Sin gluten",
+    "codigoDePais": "ES",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "España",
+      "ciudad": "Madrid"
+    }
   },
-  "correo": "admin1",
-  "contrasenha": "1234"
-}]
+  {
+    "nombre": "John",
+    "contrasenha": "1234",
+    "apellido1": "Smith",
+    "apellido2": null,
+    "correoElectronico": "john.smith@example.com",
+    "telefono": "555123456",
+    "universidad": null,
+    "especialidad": null,
+    "condicionMedica": "Diabetes",
+    "necesidadDietetica": "Baja en azúcar",
+    "codigoDePais": "US",
+    "rol": "juez",
+    "procedencia": {
+      "pais": "Estados Unidos",
+      "ciudad": "Nueva York"
+    }
+  },
+  {
+    "nombre": "Laura",
+    "contrasenha": "1234",
+    "apellido1": "Pérez",
+    "apellido2": "González",
+    "correoElectronico": "laura.perez@example.com",
+    "telefono": "654789321",
+    "universidad": "Universidad de Sao Paulo",
+    "especialidad": "Psicología",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "BR",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Brasil",
+      "ciudad": "São Paulo"
+    }
+  },
+  {
+    "nombre": "Michael",
+    "contrasenha": "1234",
+    "apellido1": "Brown",
+    "apellido2": "Davis",
+    "correoElectronico": "michael.brown@example.com",
+    "telefono": "789456123",
+    "universidad": null,
+    "especialidad": null,
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "US",
+    "rol": "administrador",
+    "procedencia": {
+      "pais": "Estados Unidos",
+      "ciudad": "Los Ángeles"
+    }
+  },{
+    "nombre": "Ana",
+    "contrasenha": "1234",
+    "apellido1": "López",
+    "apellido2": "González",
+    "correoElectronico": "ana.lopez@example.com",
+    "telefono": "456789123",
+    "universidad": "Universidad Autónoma",
+    "especialidad": "Arquitectura",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "MX",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "México",
+      "ciudad": "Monterrey"
+    }
+  },
+  {
+    "nombre": "David",
+    "contrasenha": "1234",
+    "apellido1": "Martínez",
+    "apellido2": "Rodríguez",
+    "correoElectronico": "david.martinez@example.com",
+    "telefono": "789123456",
+    "universidad": "Universidad de Barcelona",
+    "especialidad": "Derecho",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "ES",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "España",
+      "ciudad": "Barcelona"
+    }
+  },
+  {
+    "nombre": "Emily",
+    "contrasenha": "1234",
+    "apellido1": "Johnson",
+    "apellido2": null,
+    "correoElectronico": "emily.johnson@example.com",
+    "telefono": "321654987",
+    "universidad": null,
+    "especialidad": null,
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "US",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Estados Unidos",
+      "ciudad": "Chicago"
+    }
+  },
+  {
+    "nombre": "Lucas",
+    "contrasenha": "1234",
+    "apellido1": "Fernández",
+    "apellido2": "Silva",
+    "correoElectronico": "lucas.fernandez@example.com",
+    "telefono": "987321654",
+    "universidad": "Universidade de São Paulo",
+    "especialidad": "Ciencias de la Computación",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "BR",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Brasil",
+      "ciudad": "Río de Janeiro"
+    }
+  },
+  {
+    "nombre": "Sophia",
+    "contrasenha": "1234",
+    "apellido1": "Brown",
+    "apellido2": "Davis",
+    "correoElectronico": "sophia.brown@example.com",
+    "telefono": "654987321",
+    "universidad": "Universidad de California",
+    "especialidad": "Psicología",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "US",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Estados Unidos",
+      "ciudad": "San Francisco"
+    }
+  },
+  {
+    "nombre": "Carlos",
+    "contrasenha": "1234",
+    "apellido1": "Gutiérrez",
+    "apellido2": "Mendoza",
+    "correoElectronico": "carlos.gutierrez@example.com",
+    "telefono": "123987456",
+    "universidad": "Universidad Politécnica",
+    "especialidad": "Ingeniería Eléctrica",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "MX",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "México",
+      "ciudad": "Guadalajara"
+    }
+  },
+  {
+    "nombre": "Isabella",
+    "contrasenha": "1234",
+    "apellido1": "Ramos",
+    "apellido2": "Santos",
+    "correoElectronico": "isabella.ramos@example.com",
+    "telefono": "789654123",
+    "universidad": "Universidade Federal do Rio de Janeiro",
+    "especialidad": "Medicina",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "BR",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Brasil",
+      "ciudad": "Salvador"
+    }
+  },
+  {
+    "nombre": "Daniel",
+    "contrasenha": "1234",
+    "apellido1": "Hernández",
+    "apellido2": "Torres",
+    "correoElectronico": "daniel.hernandez@example.com",
+    "telefono": "321789654",
+    "universidad": "Universidad de Buenos Aires",
+    "especialidad": "Economía",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "AR",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Argentina",
+      "ciudad": "Buenos Aires"
+    }
+  },
+  {
+    "nombre": "Olivia",
+    "contrasenha": "1234",
+    "apellido1": "Lima",
+    "apellido2": "Silva",
+    "correoElectronico": "olivia.lima@example.com",
+    "telefono": "456321789",
+    "universidad": "Universidade de Lisboa",
+    "especialidad": "Historia",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "PT",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Portugal",
+      "ciudad": "Lisboa"
+    }
+  },
+  {
+    "nombre": "Alejandro",
+    "contrasenha": "1234",
+    "apellido1": "Vargas",
+    "apellido2": "Pérez",
+    "correoElectronico": "alejandro.vargas@example.com",
+    "telefono": "987456321",
+    "universidad": "Universidad de Buenos Aires",
+    "especialidad": "Diseño Gráfico",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "AR",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Argentina",
+      "ciudad": "Córdoba"
+    }
+  },
+  {
+    "nombre": "Sofia",
+    "contrasenha": "1234",
+    "apellido1": "Gómez",
+    "apellido2": "Hernández",
+    "correoElectronico": "sofia.gomez@example.com",
+    "telefono": "321789456",
+    "universidad": "Universidad de Chile",
+    "especialidad": "Biología",
+    "condicionMedica": null,
+    "necesidadDietetica": null,
+    "codigoDePais": "CL",
+    "rol": "participante",
+    "procedencia": {
+      "pais": "Chile",
+      "ciudad": "Santiago"
+    }
+  }
+]
