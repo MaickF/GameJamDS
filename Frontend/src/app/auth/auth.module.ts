@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ReporteJuegoComponent } from './reporte-juego/reporte-juego.component';
 import { JuegoComponent } from './juego/juego.component';
 import { EditarComponent } from './editar/editar.component';
+import { CalificarComponent } from './calificar/calificar.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { EditarComponent } from './editar/editar.component';
     Paso3Component,
     ReporteJuegoComponent,
     JuegoComponent,
+    CalificarComponent,
     EditarComponent
   ],
   imports: [
