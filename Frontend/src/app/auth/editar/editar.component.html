@@ -1,0 +1,40 @@
+<div class="login">
+    <div class="login-header">
+        Seleccione el tipo de elemento por editar
+    </div>
+    <div class="login-container">
+        <div class="login-input-container">
+            <select class="login-input" [(ngModel)]="seleccion">
+                <option value="usuario">Usuario</option>
+                <option value="juego">Juego</option>
+            </select>
+            <button class="login-button" type="button" (click)="mostrarContenedor()">Seleccionar</button>
+        </div>
+    </div>
+</div>
+
+<div class="Event-container">
+    <div id="usuario-container" class="container" [hidden]="seleccion !== 'usuario'" #usuarioContainer>
+        <p>Ingrese el correo del usuario:</p>
+        <input type="text" [(ngModel)]="email">
+        <button type="button" (click)="verificarUsuario()">Buscar usuario</button>
+        <div id="usuario-edit-container" [hidden]="!usuarioEncontrado" #usuarioEditContainer>
+            <p>Rol:</p>
+            <select class="login-input" [(ngModel)]="rolSeleccionado">
+                <option value="juez">Juez</option>
+                <option value="participante">Participante</option>
+                <option value="administrador">Administrador</option>
+            </select>
+            <button type="button" (click)="aplicarCambioDeRol()">Actualizar Rol</button>
+        </div>
+    </div>
+</div>
+
+<div class="Event-container">
+    <div id="juego-container" class="container" [hidden]="seleccion !== 'juego'" #juegoContainer>
+        <p>Ingrese el nombre del juego (debe ser el nombre exacto):</p>
+        <input type="text" [(ngModel)]="juego">
+        <button type="button" (click)="verificarJuego()">Buscar Juego</button>
+        <div class="error-message" *ngIf="errorFlag">{{ errorMessage }}</div>
+    </div>
+</div>

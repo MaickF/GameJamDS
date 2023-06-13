@@ -31,6 +31,9 @@
           <a class="nav-link" routerLink="/auth/event" routerLinkActive="active-link">Eventos</a>
         </li>
 
+        <li class="nav-item" *ngIf="rol === 'administrador'">
+          <a class="nav-link" routerLink="/auth/editar" routerLinkActive="active-link">Editar</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/auth/ranking" routerLinkActive="active-link">Ranking</a>
         </li>

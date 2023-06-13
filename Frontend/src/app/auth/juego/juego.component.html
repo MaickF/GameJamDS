@@ -1,20 +1,26 @@
 <html>
-    <body>
-        <div *ngIf="juego">
-            <h1 class="center texto">{{ juego.nombre }}</h1>
-            <p class="texto"><strong>Categoría:</strong> {{ juego.categoria }}</p>
-            <p class="texto"><strong>Engine:</strong> {{ juego.engine }}</p>
-            <p class="texto"><strong>Fecha del evento:</strong> {{ juego.evento.fecha }}</p>
-            <p class="texto"><strong>Lugar del evento:</strong> {{ juego.evento.lugar }}</p>
-            <p class="texto"><strong>Plataforma:</strong> {{ juego.plataforma }}</p>
-            <p class="texto"><strong>Rating:</strong> {{ juego.rating }}</p>
-        </div>
-        <div class="row center">
+
+<body>
+    <div *ngIf="juego">
+        <h1 class="center texto">{{ juego.nombre }}</h1>
+        <p class="texto"><strong>Categoría:</strong> {{ juego.categoria }}</p>
+        <p class="texto"><strong>Engine:</strong> {{ juego.engine }}</p>
+        <p class="texto"><strong>Fecha del evento:</strong> {{ juego.evento.fecha }}</p>
+        <p class="texto"><strong>Lugar del evento:</strong> {{ juego.evento.lugar }}</p>
+        <p class="texto"><strong>Plataforma:</strong> {{ juego.plataforma }}</p>
+        <p class="texto"><strong>Rating:</strong> {{ juego.rating }}</p>
+    </div>
+    <div class="row center">
+        <div id="calificar-container" class="container" [hidden]="rol !== 'juez'" #calificarContainer>
             <button class="btn" (click)="calificar()">Calificar</button>
             <button class="btn" (click)="reportarJuego()">Reportar Juego</button>
-            <button class="btn" (click)="reportarProblema()">Reportar problema técnico</button>      
+            <button class="btn" (click)="reportarProblema()">Reportar problema técnico</button>
         </div>
-    </body>
-</html>
+        <div id="calificar-container" class="container" [hidden]="rol === 'juez'" #calificarContainer>
+            <button class="btn" (click)="reportarJuego()">Reportar Juego</button>
+            <button class="btn" (click)="reportarProblema()">Reportar problema técnico</button>
+        </div>
+    </div>
+</body>
 
-  
+</html>

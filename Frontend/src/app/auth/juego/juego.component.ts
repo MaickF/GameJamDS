@@ -10,8 +10,11 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./juego.component.css']
 })
 export class JuegoComponent {
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { 
+    this.rol = localStorage.getItem('rolActual') as string;
+  }
   juego: any; // Objeto para almacenar los datos del juego
+  rol: String = 'participante';
 
   ngOnInit() {
     const juegoStr = localStorage.getItem('juego'); // Obtener el archivo guardado en el localStorage

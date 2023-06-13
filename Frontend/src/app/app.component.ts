@@ -24,11 +24,15 @@ interface Juego {
 export class AppComponent {
   constructor(private http: HttpClient, public router: Router, private sharedService: SharedService) {
     console.log("Entro router " + this.router.url)
+    localStorage.setItem("rolActual", 'administrador');
+
+    this.rol = localStorage.getItem('rolActual') as string;
   }
 
   title: string = "Inicio";
   searchValue: string = '';
   error: string = '';
+  rol: string = 'participante';
 
   buscarValor() {
     console.log("Buscando " + this.searchValue);

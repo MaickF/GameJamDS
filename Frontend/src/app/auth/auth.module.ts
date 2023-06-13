@@ -14,6 +14,7 @@ import { Paso3Component } from './paso3/paso3.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReporteJuegoComponent } from './reporte-juego/reporte-juego.component';
 import { JuegoComponent } from './juego/juego.component';
+import { EditarComponent } from './editar/editar.component';
 import { CalificarComponent } from './calificar/calificar.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CalificarComponent } from './calificar/calificar.component';
     ReporteJuegoComponent,
     JuegoComponent,
     CalificarComponent,
+    EditarComponent
   ],
   imports: [
     CommonModule,

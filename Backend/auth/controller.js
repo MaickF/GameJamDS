@@ -23,6 +23,67 @@ exports.getUserList = (req, res) => {
     });
 };
 
+exports.getUserByID = (req, res) => {
+  const userID = req.body.id;
+  User.findById(userID)
+    .then(user => {
+      if (!user) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+      res.json(user);
+      console.log(user);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+};
+
+
+exports.updateUserRole = (req, res) => {
+  const correoElectronico = req.body.correoElectronico;
+  const nuevoRol = req.body.nuevoRol;
+
+  console.log("Actualizando rol");
+  console.log(correoElectronico);
+  console.log(nuevoRol);
+  User.updateOne({ correoElectronico: correoElectronico }, { rol: nuevoRol })
+    .then(result => {
+      if (result.nModified === 0) {
+        return res.status(404).json({ error: 'User not found' });
+      }
+      res.json(result);
+      console.log(result);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+};
+
+
+exports.getUserByEmail = (req, res) => {
+  const userEmail = req.body.email;
+  console.log("Buscando email " + userEmail)
+  User.findOne({ correoElectronico: userEmail })
+    .exec()
+    .then((usuario) => {
+      if (usuario) {
+        console.log('Usuario encontrado!');
+        console.log(usuario); // Imprimir el JSON encontrado en la consola del servidor
+        res.json(usuario); // Enviar el JSON encontrado como respuesta al cliente
+      } else {
+        console.log("usuario NO encontrado...");
+        res.json([]); // Enviar un array vacío como respuesta al cliente si no se encontraron juegos
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send('Ocurrió un error al procesar la solicitud');
+    });
+};
+
+
 exports.getEventList = (req, res) => {
   Event.find({})
     .then(events => {
@@ -49,17 +110,17 @@ exports.createUser = (req, res, next) => {
   console.log("registro");
   const correoElectronico = req.body.correoElectronico;
   const contrasenha = req.body.contrasenha;
-  const nombre= req.body.nombre;
-  const apellido1= req.body.apellido1;
-  const apellido2= req.body.apellido2;
-  const telefono= req.body.telefono;
-  const universidad= req.body.universidad;
-  const especialidad= req.body.especialidad;
-  const condicionMedica= req.body.condicionMedica;
-  const necesidadDietetica= req.body.necesidadDietetica;
-  const codigoDePais= req.body.codigoDePais;
-  const pais= req.body.pais;
-  const ciudad= req.body.ciudad;
+  const nombre = req.body.nombre;
+  const apellido1 = req.body.apellido1;
+  const apellido2 = req.body.apellido2;
+  const telefono = req.body.telefono;
+  const universidad = req.body.universidad;
+  const especialidad = req.body.especialidad;
+  const condicionMedica = req.body.condicionMedica;
+  const necesidadDietetica = req.body.necesidadDietetica;
+  const codigoDePais = req.body.codigoDePais;
+  const pais = req.body.pais;
+  const ciudad = req.body.ciudad;
   console.log(correoElectronico);
   console.log(contrasenha);
   let dataUser = {};
@@ -69,10 +130,11 @@ exports.createUser = (req, res, next) => {
       console.log(usuario);
       if (usuario) {
         console.log('El usuario ya existe');
-        res.send({dataUser});
+        res.send({ dataUser });
       } else {
         console.log("ffffffffffffffff");
-        const user = new User({ nombre: nombre,
+        const user = new User({
+          nombre: nombre,
           contrasenha: contrasenha,
           apellido1: apellido1,
           apellido2: apellido2,
@@ -84,7 +146,8 @@ exports.createUser = (req, res, next) => {
           necesidadDietetica: necesidadDietetica,
           codigoDePais: codigoDePais,
           pais: pais,
-          ciudad: ciudad });
+          ciudad: ciudad
+        });
         user.save()
           .then(() => {
             const payload = {
@@ -96,11 +159,11 @@ exports.createUser = (req, res, next) => {
             const expiresIn = 24 * 60 * 60;
             dataUser = {
               name: correoElectronico,
-              correo:correoElectronico,
+              correo: correoElectronico,
               accessToken: token,
               expiresIn: expiresIn
             }
-            res.send({dataUser});
+            res.send({ dataUser });
           })
       }
     })
@@ -115,20 +178,20 @@ exports.reportGame = (req, res, next) => {
   console.log("reporte de juego");
   const tipo = req.body.tipo;
   const descripcion = req.body.descripcion;
-  const juego= req.body.juego;
+  const juego = req.body.juego;
   let dataReport = {};
-        console.log("ffffffffffffffff");
-        const report = new GameReport({ tipo: tipo, descripcion: descripcion, juego: juego});
-        report.save()
-          .then(() => {
-            dataReport = {
-              tipo: tipo,
-              descripcion: descripcion,
-              juego: juego
-            }
-            res.send({dataReport});
-          })
-  }
+  console.log("ffffffffffffffff");
+  const report = new GameReport({ tipo: tipo, descripcion: descripcion, juego: juego });
+  report.save()
+    .then(() => {
+      dataReport = {
+        tipo: tipo,
+        descripcion: descripcion,
+        juego: juego
+      }
+      res.send({ dataReport });
+    })
+}
 
 
 exports.validateUser = (req, res, next) => {
@@ -141,13 +204,13 @@ exports.validateUser = (req, res, next) => {
       console.log(usuario);
       if (usuario) {
         console.log('El usuario ya existe');
-        res.send({dataUser});
+        res.send({ dataUser });
       } else {
         console.log("ffffffffffffffff");
-            dataUser = {
-              noExiste: "true"
-            }
-            res.send({dataUser});
+        dataUser = {
+          noExiste: "true"
+        }
+        res.send({ dataUser });
       }
     })
     .catch((err) => {
@@ -247,6 +310,25 @@ exports.searchGame = (req, res, next) => {
       if (juegos.length > 0) {
         console.log('Juegos encontrados!');
         res.send(juegos);
+      } else {
+        console.log("No se ha encontrado ningún juego");
+        res.send("No se ha encontrado ningún juego");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send("Error interno del servidor");
+    });
+};
+
+exports.searchExactGame = (req, res, next) => {
+  const nombre = req.body.nombre;
+  Game.find({ nombre: nombre })
+    .exec()
+    .then((juego) => {
+      if (juego.length > 0) {
+        console.log('Juego encontrado!: ' + juego);
+        res.send(juego);
       } else {
         console.log("No se ha encontrado ningún juego");
         res.send("No se ha encontrado ningún juego");
