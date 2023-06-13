@@ -49,7 +49,7 @@ export class CalificarComponent {
   }
 
   registrarEvaluacion() {
-    const criteriosEvaluados = /* Obtener la lista de criterios evaluados */;
+    const criteriosEvaluados = "";/* Obtener la lista de criterios evaluados ;
     this.authService.registrarEvaluacion(criteriosEvaluados).subscribe(
       () => {
         // Éxito al registrar la evaluación
@@ -59,7 +59,7 @@ export class CalificarComponent {
         // Error al registrar la evaluación
         console.error('Error al registrar la evaluación:', error);
       }
-    );
+    );*/
   }
 
   retrocederCriterio(): void {

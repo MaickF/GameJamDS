@@ -16,6 +16,7 @@ import { ReporteJuegoComponent } from './reporte-juego/reporte-juego.component';
 import { JuegoComponent } from './juego/juego.component';
 import { EditarComponent } from './editar/editar.component';
 import { CalificarComponent } from './calificar/calificar.component';
+import { RankingComponent } from './ranking/ranking.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CalificarComponent } from './calificar/calificar.component';
     ReporteJuegoComponent,
     JuegoComponent,
     CalificarComponent,
-    EditarComponent
+    EditarComponent,
+    RankingComponent
   ],
   imports: [
     CommonModule,

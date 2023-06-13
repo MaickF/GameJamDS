@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, NgModule  } from '@angular/core';
+import { CommonModule } from '@angular/common';
 interface Juego {
   nombre: string;
   calificacion: number;
