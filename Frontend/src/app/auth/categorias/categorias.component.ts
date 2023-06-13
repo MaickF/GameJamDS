@@ -54,7 +54,7 @@ export class CategoriasComponent {
     'Sports': 'Deportes',
     'Strategy': 'Estrategia'
   };
-  
+
   constructor(private http: HttpClient, private router: Router) {
     this.showAllGames();
     console.log("Entro router " + this.router.url);
@@ -63,14 +63,14 @@ export class CategoriasComponent {
 
   setCategory(category: string) {
     this.currentCategory = category;
-    if (this.currentCategory == "All"){
+    if (this.currentCategory == "All") {
       this.showAllGames();
     } else {
       this.showCategory(this.categoriesES[this.currentCategory]);
     }
   }
 
-  showAllGames(){
+  showAllGames() {
     this.http.get('http://localhost:5000/getAllGames').subscribe(
       (response: Object) => {
         if (Array.isArray(response) && response.length > 0) {
@@ -90,7 +90,7 @@ export class CategoriasComponent {
     console.log("Termino el showCategory");
   }
 
-  showCategory(category: string){
+  showCategory(category: string) {
     this.http.post('http://localhost:5000/filterByCategory', { category: category }).subscribe(
       (response: Object) => {
         if (Array.isArray(response) && response.length > 0) {
@@ -119,5 +119,19 @@ export class CategoriasComponent {
   // Function to reset the category highlight
   resetHighlight() {
     this.currentCategoryHover = '';
+  }
+
+  cargarJuego(game: any) {
+    console.log(game.nombre);
+    console.log("Cargando juego");
+    this.http.post<Game>('http://localhost:5000/searchExactGame', { nombre: game.nombre }).subscribe(
+      (response) => {
+        localStorage.setItem("juego", JSON.stringify(response));
+        this.router.navigateByUrl('/auth/juego');
+      },
+      (error) => {
+        console.log("No existe el juego " + game.nombr);
+      }
+    );
   }
 }

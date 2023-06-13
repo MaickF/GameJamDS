@@ -27,7 +27,11 @@
               <img [src]="'assets/images/game.png'" alt="Category Image">
             </div>
             <div class="game-details">
-              <p class="game-text">{{ "Game: " + game.nombre }}</p>
+              <p class="game-text">
+                Game: 
+                <a href="/auth/juego" (click)="cargarJuego(game)">{{ game.nombre }}</a>
+              </p>
+              
               <p class="game-text">{{ "Description: " + game.descripcion }}</p>
               <p class="game-text">{{ "Rating: " + game.rating }}</p>
               <p class="game-text">{{ "Plataform: " + game.plataforma }}</p>
