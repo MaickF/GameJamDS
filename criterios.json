@@ -1,0 +1,27 @@
+[
+    {
+  "criterio": "Gráficos",
+  "descripcion": "Evalúa la calidad visual, los efectos especiales y la representación visual del juego."
+},
+
+{
+  "criterio": "Jugabilidad",
+  "descripcion": "Evalúa la facilidad de control, la respuesta a las acciones del jugador y la diversión general del juego."
+},
+
+{
+  "criterio": "Sonido",
+  "descripcion": "Evalúa la calidad de los efectos de sonido, la música de fondo y las voces en el juego."
+},
+
+{
+  "criterio": "Historia",
+  "descripcion": "Evalúa la trama, el desarrollo de personajes y la calidad narrativa del juego."
+},
+
+{
+  "criterio": "Rejugabilidad",
+  "descripcion": "Evalúa la capacidad del juego de ser jugado múltiples veces sin perder su interés."
+}
+
+]

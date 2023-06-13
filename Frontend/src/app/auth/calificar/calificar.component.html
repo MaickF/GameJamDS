@@ -1,0 +1,9 @@
+<div class="wizard-container">
+    <h2>{{ criterioActual?.criterio }}</h2>
+    <input type="number" [(ngModel)]="nota" placeholder="Nota del criterio">
+    <div class="buttons-container">
+      <button (click)="avanzarCriterio()">Siguiente</button>
+      <button (click)="retrocederCriterio()">Anterior</button>
+    </div>
+  </div>
+  
