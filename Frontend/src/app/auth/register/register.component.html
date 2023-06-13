@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="container">
+    <div class="login">
+      <div class="login-triangle"></div>
+  
+      <h2 class="login-header">Create account</h2>
+  
+      <form #frmLRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmLRegister)">
+        <p>
+          <input type="email" name="correo" placeholder="Correo" ngModel required>
+        </p>
+        <p>
+          <input type="password" name="contrasenha" placeholder="Contraseña" ngModel required>
+        </p>
+        <p>
+          <input type="submit" value="Register">
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

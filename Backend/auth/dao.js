@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { userSchema, eventSchema, gameSchema, categorySchema, placeSchema, feedbackSchema, rolSchema, rateSchema, gameReportSchema } = require('./model');
+const { userSchema, eventSchema, gameSchema, categorySchema, placeSchema, feedbackSchema, rolSchema, rateSchema, gameReportSchema, criterioSchema } = require('./model');
 
 /*authSchema.statics = {
   create: function (data, cb) {
@@ -23,6 +23,7 @@ const Feedback = mongoose.model('Feedback', feedbackSchema)
 const Rol = mongoose.model('Rol', rolSchema)
 const Rate = mongoose.model('Rate', rateSchema)
 const GameReport = mongoose.model('GameReport', gameReportSchema)
+const Criterio = mongoose.model('Criterio', criterioSchema)
 
 module.exports = {
   User,
@@ -33,5 +34,6 @@ module.exports = {
   Feedback,
   Rol,
   Rate,
-  GameReport
+  GameReport,
+  Criterio
 };

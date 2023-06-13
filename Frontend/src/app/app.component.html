@@ -34,7 +34,9 @@
         <li class="nav-item" *ngIf="rol === 'administrador'">
           <a class="nav-link" routerLink="/auth/editar" routerLinkActive="active-link">Editar</a>
         </li>
-        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/auth/ranking" routerLinkActive="active-link">Ranking</a>
+        </li>
       </ul>
 
       <form class="form-inline my-2 my-lg-0 ml-auto search-form" (submit)="buscarValor()">
