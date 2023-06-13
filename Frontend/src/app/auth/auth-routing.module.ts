@@ -10,6 +10,7 @@ import { Paso3Component } from './paso3/paso3.component';
 import { ReporteJuegoComponent } from './reporte-juego/reporte-juego.component';
 import { JuegoComponent } from './juego/juego.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { CalificarComponent } from './calificar/calificar.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'reporteJuego', component: ReporteJuegoComponent },
   {path: 'juego', component: JuegoComponent },
   {path: 'ranking', component: RankingComponent },
+  {path: 'calificar', component: CalificarComponent },
   {path: 'register', redirectTo: 'registro/paso1', pathMatch: 'full' },
 ];
 

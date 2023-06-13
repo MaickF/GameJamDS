@@ -76,6 +76,14 @@ export class AuthService {
     return this.httpClient.get<any>(`${this.AUTH_SERVER}/events`);
   }
 
+  getCriterios(): Observable<any> {
+    return this.httpClient.get<any>(`${this.AUTH_SERVER}/criterios`);
+  }
+
+  registrarEvaluacion(): Observable<any> {
+    return this.httpClient.get<any>(`${this.AUTH_SERVER}/criterios`);
+  }
+
   getGame(game:string): Observable<any> {
     const params = new HttpParams().set('juego', game);
     return this.httpClient.get<any>(`${this.AUTH_SERVER}/getGame`,  { params });

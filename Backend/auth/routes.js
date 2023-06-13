@@ -8,6 +8,7 @@ module.exports = (router) => {
   router.post('/login', Users.loginUser);
   router.get('/users', Users.getUserList);
   router.get('/events', Users.getEventList);
+  router.get('/criterios', Users.getCriterios);
   router.post('/filterByCategory', Users.filterByCategory);
   router.get('/getAllGames', Users.getAllGames);
   router.post ('/searchGame', Users.searchGame);

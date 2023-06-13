@@ -4,7 +4,7 @@ const Usuario = require('./Usuario');
 const SECRET_KEY = 'secretkey123456';
 const mongoose = require('mongoose');
 
-const { User, Event, Game, Category, Place, Feedback, Rol, Rate, GameReport } = require('./dao');
+const { User, Event, Game, Category, Place, Feedback, Rol, Rate, GameReport, Criterio } = require('./dao');
 
 exports.prueba = (req, res) => {
   res.send('Hello from home');
@@ -25,6 +25,17 @@ exports.getUserList = (req, res) => {
 
 exports.getEventList = (req, res) => {
   Event.find({})
+    .then(events => {
+      res.json(events);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+};
+
+exports.getCriterios = (req, res) => {
+  Criterio.find({})
     .then(events => {
       res.json(events);
     })

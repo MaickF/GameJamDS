@@ -34,6 +34,11 @@ const categorySchema = mongoose.Schema({
   descripcion: String
 }, {versionKey: false});
 
+const criterioSchema = mongoose.Schema({
+  nombre: String,
+  descripcion: String
+}, {versionKey: false});
+
 const placeSchema = mongoose.Schema({
   ubicacion: String,
   pais: String,
@@ -70,5 +75,6 @@ module.exports = {
   feedbackSchema,
   rolSchema,
   rateSchema,
-  gameReportSchema
+  gameReportSchema,
+  criterioSchema
 }
