@@ -29,7 +29,7 @@ export class CalificarComponent {
     const juezStr = localStorage.getItem('usuario'); // Obtener el archivo guardado en el localStorage
     if (juezStr !== null) {
       let archivo = JSON.parse(juezStr); // Convertir el archivo a objeto JSON
-      this.juez = archivo[0].nombre;
+      this.juez = archivo.dataUser.nombre;
       console.log(this.juego);
     }
   }
@@ -66,7 +66,7 @@ export class CalificarComponent {
 
   registrarEvaluacion() {
     for (const criterio of this.registroCriterios) {
-      console.log(criterio);
+      console.log("Evaluación: " + criterio);
       this.authService.registrarEvaluacion(criterio).subscribe(
         () => {
           // Éxito al registrar la evaluación

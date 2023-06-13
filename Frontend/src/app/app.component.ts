@@ -24,7 +24,14 @@ interface Juego {
 export class AppComponent {
   constructor(private http: HttpClient, public router: Router, private sharedService: SharedService) {
     console.log("Entro router " + this.router.url)
-    localStorage.setItem("rolActual", 'administrador');
+    const juezStr = localStorage.getItem('usuario'); // Obtener el archivo guardado en el localStorage
+    if (juezStr !== null) {
+      let archivo = JSON.parse(juezStr); // Convertir el archivo a objeto JSON
+      localStorage.setItem("rolActual", archivo.dataUser.rol);
+      console.log(archivo.dataUser.rol);
+    } else {
+      localStorage.setItem("rolActual",'participante');
+    }
 
     this.rol = localStorage.getItem('rolActual') as string;
   }
@@ -48,27 +55,27 @@ export class AppComponent {
       }
     );
   }
-  
-/*
-  buscarValor() {
-    console.log("Buscando " + this.searchValue);
-    this.http.post<Juego[]>('http://localhost:3000/buscarJuegos', { nombre: this.searchValue }).subscribe(
-        (response) => {
-          //this.juegos = response;
-          //console.log(JSON.stringify(response));
-          this.sharedService.juegos = response;
-          //this.router.navigate(['/resultados'], { state: { juegos: response } });
-          this.error = '';
-        },
-        (error) => {
-          //this.router.navigate(['/resultados'], { state: { juegos: [] } });
-          this.error = 'Ocurrió un error al buscar los juegos. Por favor, intenta nuevamente.';
-        }
-    );
-    this.router.navigate(['/resultados']);
-    console.log("asdasd");
-    if (this.error.length > 0){
-      console.log(this.error);
-    }
-  }*/
+
+  /*
+    buscarValor() {
+      console.log("Buscando " + this.searchValue);
+      this.http.post<Juego[]>('http://localhost:3000/buscarJuegos', { nombre: this.searchValue }).subscribe(
+          (response) => {
+            //this.juegos = response;
+            //console.log(JSON.stringify(response));
+            this.sharedService.juegos = response;
+            //this.router.navigate(['/resultados'], { state: { juegos: response } });
+            this.error = '';
+          },
+          (error) => {
+            //this.router.navigate(['/resultados'], { state: { juegos: [] } });
+            this.error = 'Ocurrió un error al buscar los juegos. Por favor, intenta nuevamente.';
+          }
+      );
+      this.router.navigate(['/resultados']);
+      console.log("asdasd");
+      if (this.error.length > 0){
+        console.log(this.error);
+      }
+    }*/
 }

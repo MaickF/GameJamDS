@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-  AUTH_SERVER: string = 'http://140.84.168.62:5000';
+  AUTH_SERVER: string = 'http://localhost:5000';
   authSubject = new BehaviorSubject(false);
   private token: string = '';
   constructor(private httpClient: HttpClient) { }

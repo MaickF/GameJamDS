@@ -31,10 +31,10 @@ export class JuegoComponent {
   }
 
   reportarProblema(){
-    this.router.navigateByUrl('/auth/reporteJuego');
+    this.router.navigateByUrl('/auth/reporteProblema');
   }
 
   calificar(){
-    this.router.navigateByUrl('/auth/reporteJuego');
+    this.router.navigateByUrl('/auth/calificar');
   }
 }
