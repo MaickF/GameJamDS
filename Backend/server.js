@@ -7,6 +7,13 @@ const DB = require('./config/db');
 // init DB
 DB();
 
+app.use(cors());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 const router = express.Router();
 
 const bodyParserJSON = bodyParser.json();
@@ -15,16 +22,11 @@ const bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
 app.use(bodyParserJSON);
 app.use(bodyParserURLEncoded);
 
-app.use(cors());
-
 app.use('/api', router);
 
 authRoutes(router);
-router.get('/', (req, res) => {
-  res.send('Hello from home');
-});
 
-//Middleware para proteger de las peticiones no deseadas.
+app.use('/', express.static('C:/Users/opc/Documents/GitHub/GameJamDS/Frontend/dist/gamejam-project'));
 
 app.use(router);
 // Inicia el servidor

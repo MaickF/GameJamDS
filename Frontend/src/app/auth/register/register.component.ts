@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { UserI } from '../../models/user';
 
 @Component({
   selector: 'app-register',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  constructor(private authService: AuthService, private router: Router) { }
 
+  ngOnInit() {
+  }
+
+  onRegister(form: { value: UserI; }):void{
+    this.authService.register(form.value).subscribe(res=>{
+      this.router.navigateByUrl('/auth')
+  });
+  }
 }
