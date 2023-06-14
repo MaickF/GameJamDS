@@ -213,27 +213,35 @@ exports.reportProblem = (req, res, next) => {
 }
 
 exports.registroEvaluacion = (req, res, next) => {
-  console.log("registro de calificacion");
   const criterio = req.body.nombre;
   const nota = req.body.nota;
   const juego = req.body.juego;
   const juez = req.body.juez;
-  let criterioxjuegoData = {};
-  console.log("ffffffffffffffff");
-  console.log(criterio);
-  console.log(nota);
-  const criterioxjuego = new CriterioXJuego({ criterio: criterio, nota: nota, juego: juego, juez:juez });
-  criterioxjuego.save()
-    .then(() => {
-      criterioxjuegoData = {
-        criterio: criterio,
-        nota: nota,
-        juego: juego,
-        juez: juez
+
+  CriterioXJuego.findOne({ criterio: criterio, juego: juego, juez: juez })
+    .then(existingCriterioXJuego => {
+      if (existingCriterioXJuego) {
+        // Ya existe un registro con el mismo juez, juego y criterio
+        return res.status(400).json({ error: 'Ya existe una evaluación para este juez, juego y criterio' });
       }
-      res.send({ criterioxjuegoData });
+
+      const criterioxjuego = new CriterioXJuego({ criterio: criterio, nota: nota, juego: juego, juez: juez });
+      return criterioxjuego.save()
+        .then(savedCriterioXJuego => {
+          const criterioxjuegoData = {
+            criterio: savedCriterioXJuego.criterio,
+            nota: savedCriterioXJuego.nota,
+            juego: savedCriterioXJuego.juego,
+            juez: savedCriterioXJuego.juez
+          };
+          res.send({ criterioxjuegoData });
+        });
     })
-}
+    .catch(error => {
+      console.error(error);
+      res.status(500).json({ error: 'Error interno del servidor' });
+    });
+};
 
 exports.validateUser = (req, res, next) => {
   console.log("validacion");
