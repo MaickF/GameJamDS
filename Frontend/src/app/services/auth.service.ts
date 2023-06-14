@@ -106,6 +106,16 @@ export class AuthService {
     return this.httpClient.get<any>(`${this.AUTH_SERVER}/getGames`);
   }
 
+  getJudges(): Observable<any> {
+    console.log("Entró a getJudges");
+    return this.httpClient.get<any>(`${this.AUTH_SERVER}/getJudges`);
+  }
+
+  getCriterioByGames(): Observable<any> {
+    console.log("Entró a getCriterioByGames");
+    return this.httpClient.get<any>(`${this.AUTH_SERVER}/getCriterioByGames`);
+  }
+
   private saveToken(token: string, expiresIn: string):void{
     localStorage.setItem("ACCESS_TOKEN", token);
     localStorage.setItem("EXPIRES_IN", expiresIn);

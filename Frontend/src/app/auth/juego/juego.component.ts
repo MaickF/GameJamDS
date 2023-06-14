@@ -23,7 +23,7 @@ export class JuegoComponent {
       this.juego = archivo[0];
       console.log(this.juego);
     }else{
-      console.log("me quiero morir");
+      console.log("Error equisde");
     }
   }
   reportarJuego(){

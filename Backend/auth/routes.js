@@ -20,4 +20,6 @@ module.exports = (router) => {
   router.post ('/updateUserRole', Users.updateUserRole);
   router.post ('/registroEvaluacion', Users.registroEvaluacion);
   router.post ('/reportProblem', Users.reportProblem);
+  router.get('/getJudges', Users.getJudges);
+  router.get('/getCriterioByGames', Users.getCriterioByGames);
 }

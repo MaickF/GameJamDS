@@ -343,6 +343,48 @@ exports.getAllGames = (req, res, next) => {
     });
 };
 
+exports.getJudges = (req, res, next) => {
+  console.log("Obteniendo todos los jueces");
+  User.find({rol:"juez"})
+    .exec()
+    .then((Judge) => {
+      if (Judge.length > 0) {
+        console.log('Jueces encontrados!');
+        //console.log(Game); // Imprimir el JSON encontrado en la consola del servidor
+        res.json(Judge); // Enviar el JSON encontrado como respuesta al cliente
+        console.log(res);
+      } else {
+        console.log("Jueces NO encontrados...");
+        res.json([]); // Enviar un array vacío como respuesta al cliente si no se encontraron juegos
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ error: 'Error en el servidor' }); // Enviar un error como respuesta al cliente si ocurre un error en el servidor
+    });
+};
+
+exports.getCriterioByGames = (req, res, next) => {
+  console.log("Obteniendo todos los criterios por juego");
+  CriterioXJuego.find()
+    .exec()
+    .then((CriterioXJuego) => {
+      if (CriterioXJuego.length > 0) {
+        console.log('Criterios por juegos encontrados!');
+        //console.log(Game); // Imprimir el JSON encontrado en la consola del servidor
+        res.json(CriterioXJuego); // Enviar el JSON encontrado como respuesta al cliente
+        console.log(res);
+      } else {
+        console.log("Criterios por juegos NO encontrados...");
+        res.json([]); // Enviar un array vacío como respuesta al cliente si no se encontraron juegos
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ error: 'Error en el servidor' }); // Enviar un error como respuesta al cliente si ocurre un error en el servidor
+    });
+};
+
 exports.searchGame = (req, res, next) => {
   const nombre = req.body.nombre;
   console.log(nombre);

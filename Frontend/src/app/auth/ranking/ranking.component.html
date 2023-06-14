@@ -7,7 +7,7 @@
         <th>Nombre</th>
         <th>Puntuación</th>
       </tr>
-      <tr *ngFor="let juego of juegos; let i = index">
+      <tr *ngFor="let juego of evaluaciones; let i = index">
         <td>{{ i + 1 }}</td>
         <td>{{ juego.nombre }}</td>
         <td>{{ juego.calificacion }}</td>
