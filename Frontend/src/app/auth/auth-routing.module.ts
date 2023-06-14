@@ -13,6 +13,7 @@ import { EditarComponent } from './editar/editar.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { CalificarComponent } from './calificar/calificar.component';
 import { ReporteProblemaComponent } from './reporte-problema/reporte-problema.component';
+import { DetallesCalificacionComponent } from './detalles-calificacion/detalles-calificacion.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -28,7 +29,8 @@ const routes: Routes = [
   {path: 'ranking', component: RankingComponent },
   {path: 'calificar', component: CalificarComponent },
   {path: 'register', redirectTo: 'registro/paso1', pathMatch: 'full' },
-  {path: 'editar', component: EditarComponent}
+  {path: 'editar', component: EditarComponent},
+  {path: 'detallesCalificacion', component: DetallesCalificacionComponent}
 ];
 
 @NgModule({

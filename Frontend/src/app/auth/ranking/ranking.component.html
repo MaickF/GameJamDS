@@ -1,17 +1,21 @@
-<div class="ranking-container">
-    <h1 class="ranking-title">Ranking de juegos</h1>
-  
-    <table class="ranking-table">
-      <tr>
-        <th>Posición</th>
-        <th>Nombre</th>
-        <th>Puntuación</th>
-      </tr>
-      <tr *ngFor="let juego of evaluaciones; let i = index">
-        <td>{{ i + 1 }}</td>
-        <td>{{ juego.nombre }}</td>
-        <td>{{ juego.calificacion }}</td>
-      </tr>
-    </table>
-  </div>
-  
+<html>
+  <body>
+    <div class="ranking-container">
+      <h1 class="ranking-title">Ranking de juegos</h1>
+    
+      <table class="ranking-table">
+        <tr>
+          <th>Posición</th>
+          <th>Nombre</th>
+          <th>Puntuación</th>
+        </tr>
+        <tr *ngFor="let juego of evaluaciones; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ juego.nombre }}</td>
+          <td>{{ juego.calificacion }}</td>
+        </tr>
+      </table>
+    </div>  
+  </body>
+</html>
+

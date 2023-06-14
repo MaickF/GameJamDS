@@ -15,6 +15,7 @@ export class JuegoComponent {
   }
   juego: any; // Objeto para almacenar los datos del juego
   rol: String = 'participante';
+  nota = 0;
 
   ngOnInit() {
     const juegoStr = localStorage.getItem('juego'); // Obtener el archivo guardado en el localStorage
@@ -25,6 +26,7 @@ export class JuegoComponent {
     }else{
       console.log("Error equisde");
     }
+    this.obtenerNota();
   }
   reportarJuego(){
     this.router.navigateByUrl('/auth/reporteJuego');
@@ -36,5 +38,29 @@ export class JuegoComponent {
 
   calificar(){
     this.router.navigateByUrl('/auth/calificar');
+  }
+
+  verDetalles(){
+    this.router.navigateByUrl('/auth/detallesCalificacion');
+  }
+
+  async obtenerNota(): Promise<void> {
+    let cantidad = 0;
+    try {
+      const data = await this.authService.getCriterioByGames().toPromise();
+      for(let i = 0; i<data.length; i++){
+        if(data[i].juego===this.juego.nombre){
+          cantidad++;
+          console.log(data[i].nota);
+          this.nota+=parseInt(data[i].nota);
+        }
+      }
+       // Asigna los datos recibidos a la propiedad 'juegos'
+       this.nota = this.nota/cantidad;
+      console.log(this.nota);
+      // Realiza cualquier otra operación con los datos recibidos
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

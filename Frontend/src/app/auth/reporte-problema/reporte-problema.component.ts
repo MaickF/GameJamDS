@@ -60,6 +60,8 @@ export class ReporteProblemaComponent {
       };
       this.authService.problemReport(reporte);
       this.sinMarcar=false;
+      window.confirm("Se ha registrado tu reporte")
+      this.router.navigateByUrl('/auth/juego');
     }else{
       this.sinMarcar=true;
     }

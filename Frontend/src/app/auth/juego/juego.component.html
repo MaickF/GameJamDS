@@ -9,7 +9,10 @@
         <p class="texto"><strong>Lugar del evento:</strong> {{ juego.evento.lugar }}</p>
         <p class="texto"><strong>Plataforma:</strong> {{ juego.plataforma }}</p>
         <p class="texto"><strong>Rating:</strong> {{ juego.rating }}</p>
-
+        <div class="row">
+        <p class="texto"><strong>Calificacion actual:</strong> {{ nota }}</p>
+        <p class="detalles" (click)="verDetalles()" [hidden]="rol !== 'juez'"><strong>Ver detalles</strong></p>
+        </div>
     </div>
     <div class="row center">
         <div id="calificar-container" class="container" [hidden]="rol !== 'juez'" #calificarContainer>

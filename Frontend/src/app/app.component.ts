@@ -29,6 +29,7 @@ export class AppComponent {
       let archivo = JSON.parse(juezStr); // Convertir el archivo a objeto JSON
       localStorage.setItem("rolActual", archivo.dataUser.rol);
       console.log(archivo.dataUser.rol);
+      this.usuarioRegistrado=true;
     } else {
       localStorage.setItem("rolActual",'participante');
     }
@@ -40,6 +41,7 @@ export class AppComponent {
   searchValue: string = '';
   error: string = '';
   rol: string = 'participante';
+  usuarioRegistrado = false;
 
   buscarValor() {
     console.log("Buscando " + this.searchValue);

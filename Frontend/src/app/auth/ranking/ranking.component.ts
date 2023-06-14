@@ -112,5 +112,6 @@ export class RankingComponent {
       cantidad = 0;
       resultado = 0;
     }
+    this.evaluaciones.sort((a, b) => b.calificacion - a.calificacion);
   }
 }

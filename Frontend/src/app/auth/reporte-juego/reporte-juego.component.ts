@@ -61,6 +61,8 @@ export class ReporteJuegoComponent {
       };
       this.authService.gameReport(reporte);
       this.sinMarcar=false;
+      window.confirm("Se ha registrado tu reporte")
+      this.router.navigateByUrl('/auth/juego');
     }else{
       this.sinMarcar=true;
     }

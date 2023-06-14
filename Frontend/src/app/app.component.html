@@ -16,10 +16,10 @@
           <a class="nav-link" routerLink="/auth" routerLinkActive="active-link">Inicio</a>
         </li>
 
-        <li class="nav-item active">
+        <li class="nav-item active" *ngIf="!usuarioRegistrado">
           <a class="nav-link" routerLink="/auth/login" routerLinkActive="active-link">Log In </a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item active" *ngIf="!usuarioRegistrado">
           <a class="nav-link" routerLink="/auth/registro/paso1" routerLinkActive="active-link">Sing up </a>
         </li>
 

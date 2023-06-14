@@ -1,9 +1,16 @@
+<html>
+<body>
 <div class="wizard-container">
     <h2>{{ criterioActual?.criterio }}</h2>
     <input type="number" [(ngModel)]="nota" placeholder="Nota del criterio">
-    <div class="buttons-container">
-      <button (click)="avanzarCriterio()">Siguiente</button>
-      <button (click)="retrocederCriterio()">Anterior</button>
+    <div class="buttons-container" *ngIf="!finalizar">
+        <button (click)="retrocederCriterio()">Anterior</button>
+        <button (click)="avanzarCriterio()">Siguiente</button>
+    </div>
+    <div class="buttons-container" *ngIf="finalizar">
+        <button (click)="retrocederCriterio()">Anterior</button>
+        <button (click)="avanzarCriterio()">Enviar</button>
     </div>
   </div>
-  
+</body>
+</html>

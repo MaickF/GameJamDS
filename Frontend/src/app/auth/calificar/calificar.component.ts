@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service'; // Actualiza la ruta según tu estructura de archivos
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calificar',
@@ -15,8 +15,9 @@ export class CalificarComponent {
   ultimoCriterio: boolean = false;
   juego:any;
   juez:any;
+  finalizar = false;
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {
     this.obtenerCriterios();
@@ -29,7 +30,7 @@ export class CalificarComponent {
     const juezStr = localStorage.getItem('usuario'); // Obtener el archivo guardado en el localStorage
     if (juezStr !== null) {
       let archivo = JSON.parse(juezStr); // Convertir el archivo a objeto JSON
-      this.juez = archivo.dataUser.nombre;
+      this.juez = archivo.dataUser.correoElectronico;
       console.log(this.juego);
     }
   }
@@ -56,8 +57,13 @@ export class CalificarComponent {
     if (indiceSiguiente < this.criterios.length) {
       this.criterioActual = this.criterios[indiceSiguiente];
       this.nota = 0;
+      if(indiceSiguiente== this.criterios.length-1){
+        this.finalizar = true;
+      }
     } if (indiceSiguiente == this.criterios.length) {
       this.registrarEvaluacion();
+      window.confirm("Se han registrado las calificaciones")
+      this.router.navigateByUrl('/auth/juego');
     }else {
       // Se ha completado el wizard, puedes hacer lo que necesites con los criterios registrados
       console.log(this.registroCriterios);
@@ -81,6 +87,7 @@ export class CalificarComponent {
   }
 
   retrocederCriterio(): void {
+    this.finalizar=false;
     const indiceAnterior = this.criterios.indexOf(this.criterioActual) - 1;
     if (indiceAnterior >= 0) {
       this.criterioActual = this.criterios[indiceAnterior];

@@ -1,5 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
 .wizard-container {
-    max-width: 400px;
+    width: 30%;
     margin: 0 auto;
     padding: 20px;
     background-color: #f2f2f2;

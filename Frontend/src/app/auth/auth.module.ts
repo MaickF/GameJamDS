@@ -18,6 +18,7 @@ import { EditarComponent } from './editar/editar.component';
 import { CalificarComponent } from './calificar/calificar.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { ReporteProblemaComponent } from './reporte-problema/reporte-problema.component';
+import { DetallesCalificacionComponent } from './detalles-calificacion/detalles-calificacion.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ReporteProblemaComponent } from './reporte-problema/reporte-problema.co
     CalificarComponent,
     EditarComponent,
     RankingComponent,
-    ReporteProblemaComponent
+    ReporteProblemaComponent,
+    DetallesCalificacionComponent
   ],
   imports: [
     CommonModule,
