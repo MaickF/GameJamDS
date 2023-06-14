@@ -331,6 +331,7 @@ exports.getAllGames = (req, res, next) => {
         console.log('Juegos encontrados!');
         //console.log(Game); // Imprimir el JSON encontrado en la consola del servidor
         res.json(Game); // Enviar el JSON encontrado como respuesta al cliente
+        console.log(res);
       } else {
         console.log("Juegos NO encontrados...");
         res.json([]); // Enviar un array vacío como respuesta al cliente si no se encontraron juegos

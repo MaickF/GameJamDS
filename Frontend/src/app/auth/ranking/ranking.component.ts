@@ -1,5 +1,8 @@
 import { Component, NgModule  } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+
 interface Juego {
   nombre: string;
   calificacion: number;
@@ -11,19 +14,25 @@ interface Juego {
   styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent {
-  juegos: Juego[] = [
-    { nombre: 'Final Fantasy 10', calificacion: 9 },
-    { nombre: 'Fable', calificacion: 7 },
-    { nombre: 'PayDay', calificacion: 8 },
-    { nombre: 'Fornite', calificacion: 6 },
-    { nombre: 'Honkai Star Rail', calificacion: 10 },
-  ];
+  juegos: any[] = [];
 
-  constructor() {
-    this.juegos = this.ordenarPorCalificacion(this.juegos);
+  constructor(private authService: AuthService, private router: Router) {
+    //this.juegos = this.ordenarPorCalificacion(this.juegos);
   }
 
   private ordenarPorCalificacion(juegos: Juego[]): Juego[] {
     return juegos.sort((a, b) => b.calificacion - a.calificacion);
+  }
+
+  ngOnInit(): void {
+    this.authService.getGames().subscribe(
+      data => {
+        this.juegos = data; // Asigna los datos recibidos a la propiedad 'events'
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 }

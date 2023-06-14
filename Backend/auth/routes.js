@@ -10,7 +10,7 @@ module.exports = (router) => {
   router.get('/events', Users.getEventList);
   router.get('/criterios', Users.getCriterios);
   router.post('/filterByCategory', Users.filterByCategory);
-  router.get('/getAllGames', Users.getAllGames);
+  router.get('/getGames', Users.getAllGames);
   router.post ('/searchGame', Users.searchGame);
   router.post ('/searchExactGame', Users.searchExactGame);
   router.post ('/userValidate', Users.validateUser);

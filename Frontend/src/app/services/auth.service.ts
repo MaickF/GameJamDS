@@ -101,6 +101,11 @@ export class AuthService {
     return this.httpClient.get<any>(`${this.AUTH_SERVER}/getGame`,  { params });
   }
 
+  getGames(): Observable<any> {
+    console.log("Entró a getGames");
+    return this.httpClient.get<any>(`${this.AUTH_SERVER}/getGames`);
+  }
+
   private saveToken(token: string, expiresIn: string):void{
     localStorage.setItem("ACCESS_TOKEN", token);
     localStorage.setItem("EXPIRES_IN", expiresIn);
